@@ -1,3 +1,4 @@
+const path = require("path");
 require("dotenv").config();
 const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
@@ -37,7 +38,7 @@ const {
 
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -55,7 +56,14 @@ app.use("/api/shipment", shipmentRoutes);
 
 console.log("🚀 SERVER STARTED");
 
+// Serve React build
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../client/dist/index.html")
+  );
+});
 
 // ================= INITIAL DATA =================
 
