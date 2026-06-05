@@ -1,5 +1,6 @@
 const path = require("path");
 require("dotenv").config();
+console.log("1. index.js loaded");
 const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
 
@@ -15,7 +16,10 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const ENABLE_DATA_COLLECTION = process.env.DATA_COLLECTION === "true";
-console.log("API KEY:", process.env.GEMINI_API_KEY);
+console.log(
+  "GEMINI_API_KEY loaded:",
+  !!process.env.GEMINI_API_KEY
+);
 
 const { generateNodes, generateRoutes } = require("./data/syntheticData");
 const { computeNodeRisk } = require("./services/riskEngine");
@@ -44,6 +48,8 @@ const {
 } = require("./services/geminiService");
 
 
+console.log("2. imports completed");
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -64,14 +70,7 @@ app.use("/api/shipment", shipmentRoutes);
 
 console.log("🚀 SERVER STARTED");
 
-// Serve React build
-app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "../client/dist/index.html")
-  );
-});
 
 // ================= INITIAL DATA =================
 
@@ -390,69 +389,88 @@ app.post("/api/route/find", async (req, res) => {
 // ================= SIMULATION LOOP =================
 
 setInterval(async () => {
+  try {
 
-  for (let n of nodes) {
+    for (let n of nodes) {
 
-    // 🌦 WEATHER
-    const weatherRisk = await getWeatherRisk(n.lat, n.lng);
-    n.riskFactors.weatherSeverity = weatherRisk;
+      // 🌦 WEATHER
+      const weatherRisk = await getWeatherRisk(n.lat, n.lng);
+      n.riskFactors.weatherSeverity = weatherRisk;
 
-    // 🚢 SHIPS
-    n.riskFactors.shipDensity = getShipDensity(n);
+      // 🚢 SHIPS
+      n.riskFactors.shipDensity = getShipDensity(n);
 
-    // 🌍 TRAFFIC
-    n.riskFactors.traffic = getTrafficCongestion(n);
+      // 🌍 TRAFFIC
+      n.riskFactors.traffic = getTrafficCongestion(n);
 
-    // ⏱ DELAY
-    n.riskFactors.delayRate = getDelayIndex(n);
+      // ⏱ DELAY
+      n.riskFactors.delayRate = getDelayIndex(n);
 
-    // 🔥 COMPUTE BASE RISK
-    const updated = computeNodeRisk(n);
+      // 🔥 COMPUTE BASE RISK
+      const updated = computeNodeRisk(n);
 
-    // 📈 HISTORY
-    updated.history = updated.history || [];
-    updated.history.push(updated.riskScore);
+      updated.history = updated.history || [];
+      updated.history.push(updated.riskScore);
 
-    if (updated.history.length > 5) {
-      updated.history.shift();
+      if (updated.history.length > 5) {
+        updated.history.shift();
+      }
+
+      Object.assign(n, updated);
+
+      const anomaly = detectAnomaly(n);
+
+      if (anomaly) {
+        const alert = {
+          id: Date.now() + Math.random(),
+          ...anomaly,
+          node: n.name,
+          time: Date.now()
+        };
+
+        alerts.push(alert);
+
+        if (alerts.length > 10) {
+          alerts.shift();
+        }
+
+        console.log("🚨 ALERT:", alert);
+
+        const { addAudit } = require("./data/auditStore");
+
+        addAudit({
+          type: "ANOMALY",
+          node: n.name,
+          description: anomaly.description
+        });
+      }
+
+      if (ENABLE_DATA_COLLECTION) {
+        collectData(n);
+      }
     }
 
-    Object.assign(n, updated);
-    // 🔥 ANOMALY DETECTION
-const anomaly = detectAnomaly(n);
-
-if (anomaly) {
-  const alert = {
-    id: Date.now() + Math.random(),
-    ...anomaly,
-    node: n.name,
-    time: Date.now()
-  };
-
-  alerts.push(alert);
-
-  if (alerts.length > 10) {
-    alerts.shift();
+  } catch (err) {
+    console.error("INTERVAL ERROR:", err);
   }
-
-  console.log("🚨 ALERT:", alert);
-
-  const { addAudit } = require("./data/auditStore");
-
-  addAudit({
-    type: "ANOMALY",
-    node: n.name,
-    description: anomaly.description
-  });
-}
-  
-
-    // 📊 COLLECT DATA FOR ML
-    collectData(n);
-  }
-
 }, 30000);
 
+   
+
+   
+
+  
+  // Serve React build
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../client/dist/index.html")
+  );
+});
+
+
+console.log("3. before app.listen");
 // ================= START =================
 
 app.listen(PORT, () => {
