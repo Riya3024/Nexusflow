@@ -2,17 +2,21 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
-
+# Copy entire project
 COPY . .
 
+# Install server dependencies
+WORKDIR /app/server
+RUN npm install
+
+# Build client
 WORKDIR /app/client
-COPY client/package*.json ./
 RUN npm install
 RUN npm run build
 
-WORKDIR /app
+# Start server
+WORKDIR /app/server
+
 EXPOSE 3001
 
-CMD ["node", "server/index.js"]
+CMD ["npm", "start"]
