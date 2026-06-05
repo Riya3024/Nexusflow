@@ -3,7 +3,7 @@ client/node_modules/
 client/build/
 client/dist/
 client/.env
-client/.env.*
+
 client/*.log
 
 # ===== Server (FastAPI / Python) =====
@@ -36,6 +36,6 @@ build/
 coverage/
 *.log
 .env
-.env.*
+
 
 client/.env
