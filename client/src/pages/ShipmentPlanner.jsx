@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const CITY_LIST = [
   "Mumbai",
@@ -118,13 +119,16 @@ export default function ShipmentPlanner() {
     setResult(null);
 
     try {
-      const res = await axios.post("http://localhost:3001/api/shipment-plan", {
-        origin,
-        destination,
-        weight: Number(weight),
-        priority,
-        budget: Number(budget)
-      });
+      const res = await axios.post(
+  `${API_URL}/api/shipment-plan`,
+  {
+    origin,
+    destination,
+    weight: Number(weight),
+    priority,
+    budget: Number(budget)
+  }
+);
 
       setResult(res.data.data);
     } catch (err) {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Register() {
 
@@ -26,14 +27,14 @@ export default function Register() {
       setError("");
 
       await axios.post(
-        "http://localhost:3001/api/auth/register",
-        {
-          name,
-          company,
-          email,
-          password
-        }
-      );
+  `${API_URL}/api/auth/register`,
+  {
+    name,
+    company,
+    email,
+    password
+  }
+);
 
       navigate("/");
 
