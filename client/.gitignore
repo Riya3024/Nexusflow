@@ -1,0 +1,114 @@
+# =========================
+# 🔐 ENVIRONMENT VARIABLES
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# 📦 NODE MODULES
+# =========================
+node_modules/
+**/node_modules/
+
+# =========================
+# 🏗 BUILD OUTPUT
+# =========================
+dist/
+build/
+.vite/
+
+# =========================
+# ⚙️ LOG FILES
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# 📊 GENERATED DATA (IMPORTANT FOR YOUR PROJECT)
+# =========================
+dataset.json
+audit.json
+*.csv
+
+# =========================
+# 🧪 COVERAGE / TEST
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# 🧠 CACHE FILES
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
+
+# =========================
+# 🧑‍💻 IDE / EDITOR FILES
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# 💻 OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+# 🔑 SECURITY (JUST IN CASE)
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# 📁 TEMP FILES
+# =========================
+*.tmp
+*.temp
+*.swp
+
+# =========================
+# ⚛️ REACT / VITE SPECIFIC
+# =========================
+vite.svg
+
+# =========================
+# 🐳 DOCKER (if used later)
+# =========================
+.dockerignore
+
+# =========================
+# 📦 PACKAGE LOCK (OPTIONAL)
+# =========================
+# Uncomment ONLY if you don’t want lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# 🔥 DEBUG FILES
+# =========================
+*.out
+*.err
+__pycache__/
+
+.venv/
+.env
+
+
+# =========================
+# 📁 UPLOADS (if you add file upload later)
+# =========================
+uploads/

@@ -1,0 +1,7211 @@
+[
+  {
+    "id": 1777052593857,
+    "time": "2026-04-24T17:43:13.857Z",
+    "type": "CASCADE",
+    "node": "Melbourne",
+    "result": {
+      "affectedPorts": [
+        "melbourne"
+      ],
+      "reason": [
+        "Node failure"
+      ]
+    }
+  },
+  {
+    "id": 1777052594527,
+    "time": "2026-04-24T17:43:14.527Z",
+    "type": "CASCADE",
+    "node": "Singapore",
+    "result": {
+      "affectedPorts": [
+        "Busan",
+        "Vancouver",
+        "San Francisco",
+        "Sydney",
+        "Melbourne",
+        "New York",
+        "Santos",
+        "Los Angeles",
+        "Singapore",
+        "Jeddah",
+        "Shanghai",
+        "Hong Kong",
+        "Tokyo",
+        "Cape Town",
+        "Hamburg"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777052644432,
+    "time": "2026-04-24T17:44:04.432Z",
+    "type": "CASCADE",
+    "node": "Jeddah",
+    "result": {
+      "affectedPorts": [
+        "Jeddah"
+      ],
+      "reason": [
+        "Node Failure"
+      ]
+    }
+  },
+  {
+    "id": 1777052649079,
+    "time": "2026-04-24T17:44:09.079Z",
+    "type": "CASCADE",
+    "node": "New York",
+    "result": {
+      "affectedPorts": [
+        "New York",
+        "San Francisco",
+        "Jeddah",
+        "Hong Kong"
+      ],
+      "reason": [
+        "Node Failure",
+        "Elevated risk level"
+      ]
+    }
+  },
+  {
+    "id": 1777052649357,
+    "time": "2026-04-24T17:44:09.357Z",
+    "type": "CASCADE",
+    "node": "Hamburg",
+    "result": {
+      "affectedPorts": [
+        "hamburg"
+      ],
+      "reason": [
+        "High congestion index",
+        "Geopolitical risk"
+      ]
+    }
+  },
+  {
+    "id": 1777052651495,
+    "time": "2026-04-24T17:44:11.495Z",
+    "type": "CASCADE",
+    "node": "Los Angeles",
+    "result": {
+      "affectedPorts": [
+        "Los Angeles"
+      ],
+      "reason": [
+        "Node failure due to severe congestion, extremely high ship density, and significant operational delays."
+      ]
+    }
+  },
+  {
+    "id": 1777052664800,
+    "time": "2026-04-24T17:44:24.800Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777052725034,
+    "time": "2026-04-24T17:45:25.034Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777052755518,
+    "time": "2026-04-24T17:45:55.518Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777052783993,
+    "time": "2026-04-24T17:46:23.993Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777052814026,
+    "time": "2026-04-24T17:46:54.026Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777052873578,
+    "time": "2026-04-24T17:47:53.578Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777052958062,
+    "time": "2026-04-24T17:49:18.062Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777052664798.0327,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777052964040,
+    "time": "2026-04-24T17:49:24.040Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777052995716,
+    "time": "2026-04-24T17:49:55.716Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777053144832,
+    "time": "2026-04-24T17:52:24.832Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777053173495,
+    "time": "2026-04-24T17:52:53.495Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777053203498,
+    "time": "2026-04-24T17:53:23.498Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777053385368,
+    "time": "2026-04-24T17:56:25.368Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777053443629,
+    "time": "2026-04-24T17:57:23.629Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777053445596,
+    "time": "2026-04-24T17:57:25.596Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777053474237,
+    "time": "2026-04-24T17:57:54.237Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777053565899,
+    "time": "2026-04-24T17:59:25.899Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777053625134,
+    "time": "2026-04-24T18:00:25.134Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777053714601,
+    "time": "2026-04-24T18:01:54.601Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777053804098,
+    "time": "2026-04-24T18:03:24.098Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777053895457,
+    "time": "2026-04-24T18:04:55.457Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777053955142,
+    "time": "2026-04-24T18:05:55.142Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777054043323,
+    "time": "2026-04-24T18:07:23.323Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777054076024,
+    "time": "2026-04-24T18:07:56.024Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777054076494,
+    "time": "2026-04-24T18:07:56.494Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777054105366,
+    "time": "2026-04-24T18:08:25.366Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777054433720,
+    "time": "2026-04-24T18:13:53.720Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777054435527,
+    "time": "2026-04-24T18:13:55.527Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777054493188,
+    "time": "2026-04-24T18:14:53.188Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777054615365,
+    "time": "2026-04-24T18:16:55.365Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777054645637,
+    "time": "2026-04-24T18:17:25.637Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777054734498,
+    "time": "2026-04-24T18:18:54.498Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777054763993,
+    "time": "2026-04-24T18:19:23.993Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777054796013,
+    "time": "2026-04-24T18:19:56.013Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777054823429,
+    "time": "2026-04-24T18:20:23.429Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777054979309,
+    "time": "2026-04-24T18:22:59.309Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777055157162,
+    "time": "2026-04-24T18:25:57.162Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777055184952,
+    "time": "2026-04-24T18:26:24.952Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777055216540,
+    "time": "2026-04-24T18:26:56.540Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777055246454,
+    "time": "2026-04-24T18:27:26.454Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777055303434,
+    "time": "2026-04-24T18:28:23.434Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777055337234,
+    "time": "2026-04-24T18:28:57.234Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777055367052,
+    "time": "2026-04-24T18:29:27.052Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777055394132,
+    "time": "2026-04-24T18:29:54.132Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777055516359,
+    "time": "2026-04-24T18:31:56.359Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777055545522,
+    "time": "2026-04-24T18:32:25.522Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777055636279,
+    "time": "2026-04-24T18:33:56.279Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777055636473,
+    "time": "2026-04-24T18:33:56.473Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777055663423,
+    "time": "2026-04-24T18:34:23.423Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777055784975,
+    "time": "2026-04-24T18:36:24.975Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777055814592,
+    "time": "2026-04-24T18:36:54.592Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777055815190,
+    "time": "2026-04-24T18:36:55.190Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777055815606,
+    "time": "2026-04-24T18:36:55.606Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777055845672,
+    "time": "2026-04-24T18:37:25.672Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777055846092,
+    "time": "2026-04-24T18:37:26.092Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777055874150,
+    "time": "2026-04-24T18:37:54.150Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777055875045,
+    "time": "2026-04-24T18:37:55.045Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777055875636,
+    "time": "2026-04-24T18:37:55.636Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777055966834,
+    "time": "2026-04-24T18:39:26.834Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777056026012,
+    "time": "2026-04-24T18:40:26.013Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777056085264,
+    "time": "2026-04-24T18:41:25.264Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777056175441,
+    "time": "2026-04-24T18:42:55.441Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777056204704,
+    "time": "2026-04-24T18:43:24.704Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777056206357,
+    "time": "2026-04-24T18:43:26.357Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777056239351,
+    "time": "2026-04-24T18:43:59.351Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777056294489,
+    "time": "2026-04-24T18:44:54.489Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777056325834,
+    "time": "2026-04-24T18:45:25.834Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777056371878,
+    "time": "2026-04-24T18:46:11.878Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777055966833.9414,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777056443538,
+    "time": "2026-04-24T18:47:23.538Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777056473702,
+    "time": "2026-04-24T18:47:53.702Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777056475491,
+    "time": "2026-04-24T18:47:55.491Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777056475883,
+    "time": "2026-04-24T18:47:55.883Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777056504813,
+    "time": "2026-04-24T18:48:24.813Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777056505778,
+    "time": "2026-04-24T18:48:25.778Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777056535761,
+    "time": "2026-04-24T18:48:55.761Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777056566056,
+    "time": "2026-04-24T18:49:26.056Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777056594349,
+    "time": "2026-04-24T18:49:54.349Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777056595529,
+    "time": "2026-04-24T18:49:55.529Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777056596131,
+    "time": "2026-04-24T18:49:56.131Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777056624295,
+    "time": "2026-04-24T18:50:24.295Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777056625275,
+    "time": "2026-04-24T18:50:25.275Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777056658848,
+    "time": "2026-04-24T18:50:58.848Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777056714984,
+    "time": "2026-04-24T18:51:54.984Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777056743530,
+    "time": "2026-04-24T18:52:23.530Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777056744907,
+    "time": "2026-04-24T18:52:24.907Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777056757190,
+    "time": "2026-04-24T18:52:37.190Z",
+    "type": "ROUTE_ACTION",
+    "route": "r_san_francisco_vancouver",
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777056776292,
+    "time": "2026-04-24T18:52:56.292Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777056835760,
+    "time": "2026-04-24T18:53:55.760Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777190669250,
+    "time": "2026-04-26T08:04:29.250Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777190671051,
+    "time": "2026-04-26T08:04:31.051Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777190701655,
+    "time": "2026-04-26T08:05:01.655Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777190733068,
+    "time": "2026-04-26T08:05:33.068Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777190791316,
+    "time": "2026-04-26T08:06:31.316Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777191029086,
+    "time": "2026-04-26T08:10:29.086Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777191029603,
+    "time": "2026-04-26T08:10:29.603Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777191058885,
+    "time": "2026-04-26T08:10:58.885Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777191059117,
+    "time": "2026-04-26T08:10:59.117Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777191060780,
+    "time": "2026-04-26T08:11:00.780Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777191181847,
+    "time": "2026-04-26T08:13:01.847Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777191208971,
+    "time": "2026-04-26T08:13:28.971Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777191240467,
+    "time": "2026-04-26T08:14:00.467Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777191269948,
+    "time": "2026-04-26T08:14:29.948Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777191270708,
+    "time": "2026-04-26T08:14:30.708Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777191331693,
+    "time": "2026-04-26T08:15:31.693Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777191362108,
+    "time": "2026-04-26T08:16:02.108Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777191422484,
+    "time": "2026-04-26T08:17:02.484Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777191601348,
+    "time": "2026-04-26T08:20:01.348Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777191631489,
+    "time": "2026-04-26T08:20:31.489Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777191689125,
+    "time": "2026-04-26T08:21:29.125Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777191691288,
+    "time": "2026-04-26T08:21:31.288Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777191749563,
+    "time": "2026-04-26T08:22:29.563Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777191779583,
+    "time": "2026-04-26T08:22:59.583Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777191959444,
+    "time": "2026-04-26T08:25:59.444Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777191962343,
+    "time": "2026-04-26T08:26:02.343Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777192019975,
+    "time": "2026-04-26T08:26:59.975Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777192081552,
+    "time": "2026-04-26T08:28:01.552Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777192110343,
+    "time": "2026-04-26T08:28:30.343Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777192110741,
+    "time": "2026-04-26T08:28:30.741Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777192111535,
+    "time": "2026-04-26T08:28:31.535Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777192112165,
+    "time": "2026-04-26T08:28:32.165Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777192139971,
+    "time": "2026-04-26T08:28:59.971Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777192140359,
+    "time": "2026-04-26T08:29:00.359Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777192140612,
+    "time": "2026-04-26T08:29:00.612Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777192170669,
+    "time": "2026-04-26T08:29:30.669Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777192199737,
+    "time": "2026-04-26T08:29:59.737Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777192320977,
+    "time": "2026-04-26T08:32:00.977Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777192350506,
+    "time": "2026-04-26T08:32:30.506Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777192442353,
+    "time": "2026-04-26T08:34:02.353Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777192471909,
+    "time": "2026-04-26T08:34:31.909Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777192591858,
+    "time": "2026-04-26T08:36:31.858Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777192621871,
+    "time": "2026-04-26T08:37:01.871Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777192622385,
+    "time": "2026-04-26T08:37:02.385Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777192649348,
+    "time": "2026-04-26T08:37:29.348Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777192651433,
+    "time": "2026-04-26T08:37:31.433Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777192679376,
+    "time": "2026-04-26T08:37:59.376Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777192709415,
+    "time": "2026-04-26T08:38:29.415Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777192834117,
+    "time": "2026-04-26T08:40:34.117Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777192859987,
+    "time": "2026-04-26T08:40:59.987Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777192860211,
+    "time": "2026-04-26T08:41:00.211Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777192862708,
+    "time": "2026-04-26T08:41:02.708Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777192921069,
+    "time": "2026-04-26T08:42:01.069Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777192951564,
+    "time": "2026-04-26T08:42:31.564Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777193100906,
+    "time": "2026-04-26T08:45:00.906Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777193101530,
+    "time": "2026-04-26T08:45:01.530Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777193129694,
+    "time": "2026-04-26T08:45:29.694Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777193282035,
+    "time": "2026-04-26T08:48:02.035Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777193341030,
+    "time": "2026-04-26T08:49:01.030Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777193402343,
+    "time": "2026-04-26T08:50:02.343Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777193432356,
+    "time": "2026-04-26T08:50:32.356Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777193521778,
+    "time": "2026-04-26T08:52:01.778Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777193639622,
+    "time": "2026-04-26T08:53:59.622Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777193700027,
+    "time": "2026-04-26T08:55:00.027Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777193851708,
+    "time": "2026-04-26T08:57:31.708Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777193880182,
+    "time": "2026-04-26T08:58:00.182Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777193880788,
+    "time": "2026-04-26T08:58:00.788Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777193999904,
+    "time": "2026-04-26T08:59:59.904Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777194149742,
+    "time": "2026-04-26T09:02:29.742Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777194211139,
+    "time": "2026-04-26T09:03:31.139Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777194271380,
+    "time": "2026-04-26T09:04:31.380Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777197997418,
+    "time": "2026-04-26T10:06:37.418Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777197997696,
+    "time": "2026-04-26T10:06:37.696Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777198177611,
+    "time": "2026-04-26T10:09:37.611Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777198207639,
+    "time": "2026-04-26T10:10:07.639Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777198299112,
+    "time": "2026-04-26T10:11:39.112Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777198508951,
+    "time": "2026-04-26T10:15:08.951Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777198510475,
+    "time": "2026-04-26T10:15:10.475Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777198629161,
+    "time": "2026-04-26T10:17:09.161Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777198658374,
+    "time": "2026-04-26T10:17:38.374Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777198690393,
+    "time": "2026-04-26T10:18:10.393Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777198719770,
+    "time": "2026-04-26T10:18:39.770Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777198720635,
+    "time": "2026-04-26T10:18:40.635Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777198750222,
+    "time": "2026-04-26T10:19:10.222Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777198779336,
+    "time": "2026-04-26T10:19:39.336Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777198807793,
+    "time": "2026-04-26T10:20:07.793Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777198809485,
+    "time": "2026-04-26T10:20:09.485Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777198868244,
+    "time": "2026-04-26T10:21:08.244Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777198870316,
+    "time": "2026-04-26T10:21:10.316Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777198897653,
+    "time": "2026-04-26T10:21:37.653Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777198927598,
+    "time": "2026-04-26T10:22:07.598Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777198929491,
+    "time": "2026-04-26T10:22:09.491Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777198959471,
+    "time": "2026-04-26T10:22:39.471Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777199018078,
+    "time": "2026-04-26T10:23:38.078Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777199078987,
+    "time": "2026-04-26T10:24:38.987Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777199109200,
+    "time": "2026-04-26T10:25:09.200Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777199235480,
+    "time": "2026-04-26T10:27:15.480Z",
+    "type": "CASCADE",
+    "node": "Dubai",
+    "result": {
+      "affectedPorts": [
+        "Dubai"
+      ],
+      "reason": [
+        "Node Failure"
+      ]
+    }
+  },
+  {
+    "id": 1777199237984,
+    "time": "2026-04-26T10:27:17.984Z",
+    "type": "CASCADE",
+    "node": "Dubai",
+    "result": {
+      "affectedPorts": [
+        "dubai",
+        "jeddah",
+        "mumbai",
+        "singapore",
+        "rotterdam",
+        "antwerp",
+        "hamburg"
+      ],
+      "reason": [
+        "Node Failure",
+        "Supply Chain Disruption",
+        "Rerouting of Vessels",
+        "Increased Congestion at Alternative Ports"
+      ]
+    }
+  },
+  {
+    "id": 1777199259736,
+    "time": "2026-04-26T10:27:39.736Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777199317719,
+    "time": "2026-04-26T10:28:37.719Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777199318305,
+    "time": "2026-04-26T10:28:38.305Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777199319340,
+    "time": "2026-04-26T10:28:39.340Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777199348304,
+    "time": "2026-04-26T10:29:08.304Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777199437922,
+    "time": "2026-04-26T10:30:37.922Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777199469358,
+    "time": "2026-04-26T10:31:09.358Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777199559034,
+    "time": "2026-04-26T10:32:39.034Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777199588901,
+    "time": "2026-04-26T10:33:08.901Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777199619147,
+    "time": "2026-04-26T10:33:39.147Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777199648131,
+    "time": "2026-04-26T10:34:08.131Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777199860712,
+    "time": "2026-04-26T10:37:40.712Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777199888571,
+    "time": "2026-04-26T10:38:08.571Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777200070129,
+    "time": "2026-04-26T10:41:10.129Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777200101085,
+    "time": "2026-04-26T10:41:41.085Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777200128606,
+    "time": "2026-04-26T10:42:08.606Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777200128904,
+    "time": "2026-04-26T10:42:08.904Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777200159375,
+    "time": "2026-04-26T10:42:39.375Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777200218447,
+    "time": "2026-04-26T10:43:38.447Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777200250308,
+    "time": "2026-04-26T10:44:10.308Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777200309315,
+    "time": "2026-04-26T10:45:09.315Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777200338987,
+    "time": "2026-04-26T10:45:38.987Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777200340014,
+    "time": "2026-04-26T10:45:40.014Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777200369899,
+    "time": "2026-04-26T10:46:09.899Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777200398473,
+    "time": "2026-04-26T10:46:38.473Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777200458252,
+    "time": "2026-04-26T10:47:38.252Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777200459410,
+    "time": "2026-04-26T10:47:39.410Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777200488439,
+    "time": "2026-04-26T10:48:08.439Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777200488831,
+    "time": "2026-04-26T10:48:08.831Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777200490021,
+    "time": "2026-04-26T10:48:10.021Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777200549062,
+    "time": "2026-04-26T10:49:09.062Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777200549285,
+    "time": "2026-04-26T10:49:09.285Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777200579077,
+    "time": "2026-04-26T10:49:39.077Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777200580743,
+    "time": "2026-04-26T10:49:40.743Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777200640284,
+    "time": "2026-04-26T10:50:40.284Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777200671740,
+    "time": "2026-04-26T10:51:11.740Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777200761043,
+    "time": "2026-04-26T10:52:41.043Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777200790742,
+    "time": "2026-04-26T10:53:10.742Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777200938506,
+    "time": "2026-04-26T10:55:38.506Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777201090333,
+    "time": "2026-04-26T10:58:10.333Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777201118636,
+    "time": "2026-04-26T10:58:38.636Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777201178779,
+    "time": "2026-04-26T10:59:38.779Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777201179191,
+    "time": "2026-04-26T10:59:39.191Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777201208754,
+    "time": "2026-04-26T11:00:08.754Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777201210618,
+    "time": "2026-04-26T11:00:10.618Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777201240074,
+    "time": "2026-04-26T11:00:40.074Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777201328682,
+    "time": "2026-04-26T11:02:08.682Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777201358695,
+    "time": "2026-04-26T11:02:38.695Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777201388348,
+    "time": "2026-04-26T11:03:08.348Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777201390163,
+    "time": "2026-04-26T11:03:10.163Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777201418260,
+    "time": "2026-04-26T11:03:38.260Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777201448347,
+    "time": "2026-04-26T11:04:08.347Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777201448899,
+    "time": "2026-04-26T11:04:08.899Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777204774942,
+    "time": "2026-04-26T11:59:34.942Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777204775573,
+    "time": "2026-04-26T11:59:35.573Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777204775688,
+    "time": "2026-04-26T11:59:35.688Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777204775734,
+    "time": "2026-04-26T11:59:35.734Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777204775771,
+    "time": "2026-04-26T11:59:35.771Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777204775786,
+    "time": "2026-04-26T11:59:35.786Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777204775883,
+    "time": "2026-04-26T11:59:35.883Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777204775916,
+    "time": "2026-04-26T11:59:35.916Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777204775923,
+    "time": "2026-04-26T11:59:35.923Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777265083349,
+    "time": "2026-04-27T04:44:43.349Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777265099031,
+    "time": "2026-04-27T04:44:59.031Z",
+    "type": "CASCADE",
+    "node": "Singapore",
+    "result": {
+      "affectedPorts": [
+        "tokyo",
+        "hamburg",
+        "shanghai",
+        "santos",
+        "rotterdam",
+        "vancouver",
+        "dubai",
+        "hong_kong",
+        "los_angeles",
+        "new_york",
+        "mumbai",
+        "busan",
+        "antwerp",
+        "jeddah"
+      ],
+      "reason": [
+        "Disruption of critical global East-West shipping routes and connectivity.",
+        "Loss of a major transshipment and bunkering hub for cargo distribution.",
+        "Forced rerouting of vessels leading to significant delays and increased transit times.",
+        "Increased congestion and strain on alternative ports, exacerbating existing bottlenecks.",
+        "Cascading impact on global supply chains, affecting delivery schedules and costs worldwide."
+      ]
+    }
+  },
+  {
+    "id": 1777265100683,
+    "time": "2026-04-27T04:45:00.683Z",
+    "type": "CASCADE",
+    "node": "Hong Kong",
+    "result": {
+      "affectedPorts": [
+        "Hong Kong"
+      ],
+      "reason": [
+        "High ship density",
+        "Severe traffic congestion",
+        "Elevated delay rates",
+        "Medium geopolitical risk"
+      ]
+    }
+  },
+  {
+    "id": 1777265166855,
+    "time": "2026-04-27T04:46:06.855Z",
+    "type": "CASCADE",
+    "node": "Shanghai",
+    "result": {
+      "affectedPorts": [
+        "Shanghai"
+      ],
+      "reason": [
+        "High ship density leading to congestion",
+        "Significant traffic volume",
+        "Elevated delay rates",
+        "Increased geopolitical risk"
+      ]
+    }
+  },
+  {
+    "id": 1777352327226,
+    "time": "2026-04-28T04:58:47.226Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777352386271,
+    "time": "2026-04-28T04:59:46.271Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777352626681,
+    "time": "2026-04-28T05:03:46.681Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777352627681,
+    "time": "2026-04-28T05:03:47.681Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777352657829,
+    "time": "2026-04-28T05:04:17.829Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777352687809,
+    "time": "2026-04-28T05:04:47.809Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1777352746760,
+    "time": "2026-04-28T05:05:46.760Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777352778135,
+    "time": "2026-04-28T05:06:18.135Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777352835731,
+    "time": "2026-04-28T05:07:15.731Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777352837820,
+    "time": "2026-04-28T05:07:17.820Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777352926155,
+    "time": "2026-04-28T05:08:46.155Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777352956369,
+    "time": "2026-04-28T05:09:16.369Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777353047689,
+    "time": "2026-04-28T05:10:47.689Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777353136688,
+    "time": "2026-04-28T05:12:16.688Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777353196536,
+    "time": "2026-04-28T05:13:16.536Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777353256753,
+    "time": "2026-04-28T05:14:16.753Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777353315930,
+    "time": "2026-04-28T05:15:15.930Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777353348370,
+    "time": "2026-04-28T05:15:48.370Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777357122149,
+    "time": "2026-04-28T06:18:42.149Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777357148044,
+    "time": "2026-04-28T06:19:08.044Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777357178994,
+    "time": "2026-04-28T06:19:38.994Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777357179346,
+    "time": "2026-04-28T06:19:39.346Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777357237577,
+    "time": "2026-04-28T06:20:37.577Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777357258994,
+    "time": "2026-04-28T06:20:58.994Z",
+    "type": "CASCADE",
+    "node": "Dubai",
+    "result": {
+      "affectedPorts": [
+        "dubai"
+      ],
+      "reason": [
+        "Node Failure"
+      ]
+    }
+  },
+  {
+    "id": 1777357267569,
+    "time": "2026-04-28T06:21:07.569Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777357481506,
+    "time": "2026-04-28T06:24:41.506Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1777357507788,
+    "time": "2026-04-28T06:25:07.788Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777357508161,
+    "time": "2026-04-28T06:25:08.161Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777357539273,
+    "time": "2026-04-28T06:25:39.273Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777357600832,
+    "time": "2026-04-28T06:26:40.832Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777357600875,
+    "time": "2026-04-28T06:26:40.875Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777359352044,
+    "time": "2026-04-28T06:55:52.044Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777359352403,
+    "time": "2026-04-28T06:55:52.403Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777359368455,
+    "time": "2026-04-28T06:56:08.455Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777359352038.7178,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777359374165,
+    "time": "2026-04-28T06:56:14.165Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777359352038.7178,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777359376812,
+    "time": "2026-04-28T06:56:16.812Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777359352038.7178,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777359381996,
+    "time": "2026-04-28T06:56:21.996Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777359411345,
+    "time": "2026-04-28T06:56:51.345Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777359441220,
+    "time": "2026-04-28T06:57:21.220Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777359441944,
+    "time": "2026-04-28T06:57:21.944Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777359443228,
+    "time": "2026-04-28T06:57:23.228Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777359471978,
+    "time": "2026-04-28T06:57:51.978Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777359653148,
+    "time": "2026-04-28T07:00:53.148Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777359740519,
+    "time": "2026-04-28T07:02:20.519Z",
+    "type": "CASCADE",
+    "node": "Hong Kong",
+    "result": {
+      "affectedPorts": [
+        "Rotterdam",
+        "Los Angeles",
+        "New York",
+        "Mumbai",
+        "Hamburg",
+        "Hong Kong",
+        "Singapore",
+        "Jeddah",
+        "Vancouver",
+        "Busan",
+        "Durban",
+        "Shanghai",
+        "Tokyo",
+        "Sydney",
+        "Dubai"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777359740837,
+    "time": "2026-04-28T07:02:20.837Z",
+    "type": "CASCADE",
+    "node": "Singapore",
+    "result": {
+      "affectedPorts": [
+        "Rotterdam",
+        "Los Angeles",
+        "New York",
+        "Mumbai",
+        "Hamburg",
+        "Hong Kong",
+        "Singapore",
+        "Jeddah",
+        "Vancouver",
+        "Busan",
+        "Durban",
+        "Shanghai",
+        "Tokyo",
+        "Sydney",
+        "Dubai"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777359742870,
+    "time": "2026-04-28T07:02:22.870Z",
+    "type": "CASCADE",
+    "node": "Mumbai",
+    "result": {
+      "affectedPorts": [
+        "Rotterdam",
+        "Los Angeles",
+        "New York",
+        "Mumbai",
+        "Hamburg",
+        "Hong Kong",
+        "Singapore",
+        "Jeddah",
+        "Vancouver",
+        "Busan",
+        "Durban",
+        "Shanghai",
+        "Tokyo",
+        "Sydney",
+        "Dubai"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777359744379,
+    "time": "2026-04-28T07:02:24.379Z",
+    "type": "CASCADE",
+    "node": "Jeddah",
+    "result": {
+      "affectedPorts": [
+        "Rotterdam",
+        "Los Angeles",
+        "New York",
+        "Mumbai",
+        "Hamburg",
+        "Hong Kong",
+        "Singapore",
+        "Jeddah",
+        "Vancouver",
+        "Busan",
+        "Durban",
+        "Shanghai",
+        "Tokyo",
+        "Sydney",
+        "Dubai"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777359773067,
+    "time": "2026-04-28T07:02:53.067Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777359833823,
+    "time": "2026-04-28T07:03:53.823Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777359862546,
+    "time": "2026-04-28T07:04:22.546Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777359920971,
+    "time": "2026-04-28T07:05:20.971Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777361676220,
+    "time": "2026-04-28T07:34:36.220Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777361702435,
+    "time": "2026-04-28T07:35:02.435Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777361703358,
+    "time": "2026-04-28T07:35:03.358Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777361793554,
+    "time": "2026-04-28T07:36:33.554Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777361822837,
+    "time": "2026-04-28T07:37:02.837Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777361823715,
+    "time": "2026-04-28T07:37:03.715Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777361962237,
+    "time": "2026-04-28T07:39:22.237Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777361962249,
+    "time": "2026-04-28T07:39:22.249Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777361962265,
+    "time": "2026-04-28T07:39:22.265Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777361962302,
+    "time": "2026-04-28T07:39:22.302Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777362054341,
+    "time": "2026-04-28T07:40:54.341Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777362173429,
+    "time": "2026-04-28T07:42:53.429Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777362174271,
+    "time": "2026-04-28T07:42:54.271Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777362205142,
+    "time": "2026-04-28T07:43:25.142Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777362234678,
+    "time": "2026-04-28T07:43:54.678Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777362236575,
+    "time": "2026-04-28T07:43:56.575Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777362263308,
+    "time": "2026-04-28T07:44:23.308Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777362264521,
+    "time": "2026-04-28T07:44:24.521Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777362294391,
+    "time": "2026-04-28T07:44:54.391Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777364133605,
+    "time": "2026-04-28T08:15:33.605Z",
+    "type": "CASCADE",
+    "node": "Durban",
+    "result": {
+      "affectedPorts": [
+        "New York",
+        "Rotterdam",
+        "Durban",
+        "Singapore",
+        "Shanghai",
+        "Dubai",
+        "Melbourne",
+        "Busan",
+        "Mumbai",
+        "San Francisco",
+        "Jeddah",
+        "Hamburg",
+        "Santos",
+        "Los Angeles",
+        "Hong Kong"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777364142385,
+    "time": "2026-04-28T08:15:42.385Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777364153465,
+    "time": "2026-04-28T08:15:53.465Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777364156781,
+    "time": "2026-04-28T08:15:56.781Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777364174777,
+    "time": "2026-04-28T08:16:14.777Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777364177282,
+    "time": "2026-04-28T08:16:17.282Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777364181789,
+    "time": "2026-04-28T08:16:21.789Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777364219869,
+    "time": "2026-04-28T08:16:59.869Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364142383.4539,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777364261918,
+    "time": "2026-04-28T08:17:41.918Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777364263121,
+    "time": "2026-04-28T08:17:43.121Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777364353817,
+    "time": "2026-04-28T08:19:13.817Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777364564078,
+    "time": "2026-04-28T08:22:44.078Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777364591772,
+    "time": "2026-04-28T08:23:11.772Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777364622632,
+    "time": "2026-04-28T08:23:42.632Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777364622902,
+    "time": "2026-04-28T08:23:42.902Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777364832111,
+    "time": "2026-04-28T08:27:12.111Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777364862252,
+    "time": "2026-04-28T08:27:42.252Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777364892331,
+    "time": "2026-04-28T08:28:12.331Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777364970041,
+    "time": "2026-04-28T08:29:30.041Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364261917.1135,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1777364972682,
+    "time": "2026-04-28T08:29:32.682Z",
+    "type": "ROUTE_ACTION",
+    "route": 1777364261917.1135,
+    "action": "REJECT"
+  },
+  {
+    "id": 1777365012521,
+    "time": "2026-04-28T08:30:12.521Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777365056004,
+    "time": "2026-04-28T08:30:56.004Z",
+    "type": "CASCADE",
+    "node": "Shanghai",
+    "result": {
+      "affectedPorts": [
+        "New York",
+        "Rotterdam",
+        "Durban",
+        "Singapore",
+        "Shanghai",
+        "Dubai",
+        "Melbourne",
+        "Busan",
+        "Mumbai",
+        "San Francisco",
+        "Jeddah",
+        "Hamburg",
+        "Santos",
+        "Los Angeles",
+        "Hong Kong"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777365057191,
+    "time": "2026-04-28T08:30:57.191Z",
+    "type": "CASCADE",
+    "node": "Busan",
+    "result": {
+      "affectedPorts": [
+        "New York",
+        "Rotterdam",
+        "Durban",
+        "Singapore",
+        "Shanghai",
+        "Dubai",
+        "Melbourne",
+        "Busan",
+        "Mumbai",
+        "San Francisco",
+        "Jeddah",
+        "Hamburg",
+        "Santos",
+        "Los Angeles",
+        "Hong Kong"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777365115842,
+    "time": "2026-04-28T08:31:55.842Z",
+    "type": "CASCADE",
+    "node": "Shanghai",
+    "result": {
+      "affectedPorts": [
+        "New York",
+        "Rotterdam",
+        "Durban",
+        "Singapore",
+        "Shanghai",
+        "Dubai",
+        "Melbourne",
+        "Busan",
+        "Mumbai",
+        "San Francisco",
+        "Jeddah",
+        "Hamburg",
+        "Santos",
+        "Los Angeles",
+        "Hong Kong"
+      ],
+      "reason": [
+        "Regional congestion",
+        "Route disruption",
+        "Traffic overload"
+      ]
+    }
+  },
+  {
+    "id": 1777365132716,
+    "time": "2026-04-28T08:32:12.716Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777365222556,
+    "time": "2026-04-28T08:33:42.556Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777365223386,
+    "time": "2026-04-28T08:33:43.386Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365253700,
+    "time": "2026-04-28T08:34:13.700Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365342035,
+    "time": "2026-04-28T08:35:42.035Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777365342845,
+    "time": "2026-04-28T08:35:42.845Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777365372969,
+    "time": "2026-04-28T08:36:12.969Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777365462692,
+    "time": "2026-04-28T08:37:42.692Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777365463390,
+    "time": "2026-04-28T08:37:43.390Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365506970,
+    "time": "2026-04-28T08:38:26.970Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777365516999,
+    "time": "2026-04-28T08:38:36.999Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777365527052,
+    "time": "2026-04-28T08:38:47.052Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777365536972,
+    "time": "2026-04-28T08:38:56.972Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777365541996,
+    "time": "2026-04-28T08:39:01.996Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777365552128,
+    "time": "2026-04-28T08:39:12.128Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777365557042,
+    "time": "2026-04-28T08:39:17.042Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777365557146,
+    "time": "2026-04-28T08:39:17.146Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365582134,
+    "time": "2026-04-28T08:39:42.134Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777365584793,
+    "time": "2026-04-28T08:39:44.793Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365584834,
+    "time": "2026-04-28T08:39:44.834Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777365584931,
+    "time": "2026-04-28T08:39:44.931Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777365584961,
+    "time": "2026-04-28T08:39:44.961Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777365748512,
+    "time": "2026-04-28T08:42:28.512Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777365748552,
+    "time": "2026-04-28T08:42:28.552Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777365748585,
+    "time": "2026-04-28T08:42:28.585Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777365786130,
+    "time": "2026-04-28T08:43:06.130Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777365786159,
+    "time": "2026-04-28T08:43:06.159Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777365792132,
+    "time": "2026-04-28T08:43:12.132Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777365792148,
+    "time": "2026-04-28T08:43:12.148Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777365997153,
+    "time": "2026-04-28T08:46:37.153Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777366037131,
+    "time": "2026-04-28T08:47:17.131Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777366042147,
+    "time": "2026-04-28T08:47:22.147Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777366146283,
+    "time": "2026-04-28T08:49:06.283Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777366156312,
+    "time": "2026-04-28T08:49:16.312Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777366161332,
+    "time": "2026-04-28T08:49:21.332Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777366162231,
+    "time": "2026-04-28T08:49:22.231Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366177224,
+    "time": "2026-04-28T08:49:37.224Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777366177283,
+    "time": "2026-04-28T08:49:37.283Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777366187312,
+    "time": "2026-04-28T08:49:47.312Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777366192290,
+    "time": "2026-04-28T08:49:52.290Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366257304,
+    "time": "2026-04-28T08:50:57.304Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777366307371,
+    "time": "2026-04-28T08:51:47.371Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777366312294,
+    "time": "2026-04-28T08:51:52.294Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366342306,
+    "time": "2026-04-28T08:52:22.306Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366342386,
+    "time": "2026-04-28T08:52:22.386Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777366527446,
+    "time": "2026-04-28T08:55:27.446Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777366843056,
+    "time": "2026-04-28T09:00:43.056Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777366903844,
+    "time": "2026-04-28T09:01:43.844Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366933771,
+    "time": "2026-04-28T09:02:13.771Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777366993177,
+    "time": "2026-04-28T09:03:13.177Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777367052675,
+    "time": "2026-04-28T09:04:12.675Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777367085099,
+    "time": "2026-04-28T09:04:45.099Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1777367203790,
+    "time": "2026-04-28T09:06:43.790Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777367354179,
+    "time": "2026-04-28T09:09:14.179Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777367518358,
+    "time": "2026-04-28T09:11:58.358Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777367518367,
+    "time": "2026-04-28T09:11:58.367Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777367598257,
+    "time": "2026-04-28T09:13:18.257Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777367598290,
+    "time": "2026-04-28T09:13:18.290Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777367598305,
+    "time": "2026-04-28T09:13:18.305Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777367719426,
+    "time": "2026-04-28T09:15:19.426Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777367749748,
+    "time": "2026-04-28T09:15:49.748Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777367960463,
+    "time": "2026-04-28T09:19:20.463Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777368050697,
+    "time": "2026-04-28T09:20:50.697Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777368080111,
+    "time": "2026-04-28T09:21:20.111Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777368110302,
+    "time": "2026-04-28T09:21:50.302Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777368139810,
+    "time": "2026-04-28T09:22:19.810Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777368169233,
+    "time": "2026-04-28T09:22:49.233Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777368169979,
+    "time": "2026-04-28T09:22:49.979Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777368289260,
+    "time": "2026-04-28T09:24:49.260Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777368319330,
+    "time": "2026-04-28T09:25:19.330Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777368320052,
+    "time": "2026-04-28T09:25:20.052Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777368350000,
+    "time": "2026-04-28T09:25:50.000Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777368411382,
+    "time": "2026-04-28T09:26:51.382Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777368469313,
+    "time": "2026-04-28T09:27:49.313Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777368469829,
+    "time": "2026-04-28T09:27:49.829Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777368500454,
+    "time": "2026-04-28T09:28:20.454Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777368501024,
+    "time": "2026-04-28T09:28:21.024Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1777368530243,
+    "time": "2026-04-28T09:28:50.243Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1777368591263,
+    "time": "2026-04-28T09:29:51.263Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777368620260,
+    "time": "2026-04-28T09:30:20.260Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777368650369,
+    "time": "2026-04-28T09:30:50.369Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777368679216,
+    "time": "2026-04-28T09:31:19.216Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777368919158,
+    "time": "2026-04-28T09:35:19.158Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777368919906,
+    "time": "2026-04-28T09:35:19.906Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777368949911,
+    "time": "2026-04-28T09:35:49.911Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777369039156,
+    "time": "2026-04-28T09:37:19.156Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1777369039562,
+    "time": "2026-04-28T09:37:19.562Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777369069431,
+    "time": "2026-04-28T09:37:49.431Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777369099543,
+    "time": "2026-04-28T09:38:19.543Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777369100159,
+    "time": "2026-04-28T09:38:20.159Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777369129047,
+    "time": "2026-04-28T09:38:49.047Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777369130226,
+    "time": "2026-04-28T09:38:50.226Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777369159032,
+    "time": "2026-04-28T09:39:19.032Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777369219667,
+    "time": "2026-04-28T09:40:19.667Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777369249612,
+    "time": "2026-04-28T09:40:49.612Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777541760509,
+    "time": "2026-04-30T09:36:00.509Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777541790262,
+    "time": "2026-04-30T09:36:30.262Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777541879853,
+    "time": "2026-04-30T09:37:59.853Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777541881224,
+    "time": "2026-04-30T09:38:01.224Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777541911788,
+    "time": "2026-04-30T09:38:31.788Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777541912494,
+    "time": "2026-04-30T09:38:32.494Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777542179956,
+    "time": "2026-04-30T09:42:59.956Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777542479865,
+    "time": "2026-04-30T09:47:59.865Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777542540311,
+    "time": "2026-04-30T09:49:00.311Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777542601923,
+    "time": "2026-04-30T09:50:01.923Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777542630904,
+    "time": "2026-04-30T09:50:30.904Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777542660339,
+    "time": "2026-04-30T09:51:00.339Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777542692127,
+    "time": "2026-04-30T09:51:32.127Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777542751925,
+    "time": "2026-04-30T09:52:31.925Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777542781294,
+    "time": "2026-04-30T09:53:01.294Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777542841191,
+    "time": "2026-04-30T09:54:01.191Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777542899982,
+    "time": "2026-04-30T09:54:59.982Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777542932361,
+    "time": "2026-04-30T09:55:32.361Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777543051731,
+    "time": "2026-04-30T09:57:31.731Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777543051915,
+    "time": "2026-04-30T09:57:31.915Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777543082148,
+    "time": "2026-04-30T09:58:02.148Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777543082317,
+    "time": "2026-04-30T09:58:02.317Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777543172111,
+    "time": "2026-04-30T09:59:32.111Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777543290944,
+    "time": "2026-04-30T10:01:30.944Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777543320931,
+    "time": "2026-04-30T10:02:00.931Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777543321902,
+    "time": "2026-04-30T10:02:01.902Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777543380396,
+    "time": "2026-04-30T10:03:00.396Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777543382279,
+    "time": "2026-04-30T10:03:02.279Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1777543412128,
+    "time": "2026-04-30T10:03:32.128Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777543441552,
+    "time": "2026-04-30T10:04:01.552Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777543500433,
+    "time": "2026-04-30T10:05:00.433Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777543500755,
+    "time": "2026-04-30T10:05:00.755Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777543531399,
+    "time": "2026-04-30T10:05:31.399Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777543591186,
+    "time": "2026-04-30T10:06:31.186Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777543621722,
+    "time": "2026-04-30T10:07:01.722Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777543651646,
+    "time": "2026-04-30T10:07:31.646Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777543741535,
+    "time": "2026-04-30T10:09:01.535Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777543741872,
+    "time": "2026-04-30T10:09:01.872Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777543861084,
+    "time": "2026-04-30T10:11:01.084Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777543861617,
+    "time": "2026-04-30T10:11:01.617Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777543862172,
+    "time": "2026-04-30T10:11:02.172Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1777543892152,
+    "time": "2026-04-30T10:11:32.152Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777544010614,
+    "time": "2026-04-30T10:13:30.614Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777544011635,
+    "time": "2026-04-30T10:13:31.635Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777544042676,
+    "time": "2026-04-30T10:14:02.676Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1777544162321,
+    "time": "2026-04-30T10:16:02.321Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1777544251676,
+    "time": "2026-04-30T10:17:31.676Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777544310535,
+    "time": "2026-04-30T10:18:30.535Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777544312662,
+    "time": "2026-04-30T10:18:32.662Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777544340378,
+    "time": "2026-04-30T10:19:00.378Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777544461910,
+    "time": "2026-04-30T10:21:01.910Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777544491875,
+    "time": "2026-04-30T10:21:31.875Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1777544581786,
+    "time": "2026-04-30T10:23:01.786Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1777544793267,
+    "time": "2026-04-30T10:26:33.267Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1777544911658,
+    "time": "2026-04-30T10:28:31.658Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777545120977,
+    "time": "2026-04-30T10:32:00.977Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1777545121729,
+    "time": "2026-04-30T10:32:01.729Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1777545212212,
+    "time": "2026-04-30T10:33:32.212Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1777545241817,
+    "time": "2026-04-30T10:34:01.817Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777545300440,
+    "time": "2026-04-30T10:35:00.440Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1777545331528,
+    "time": "2026-04-30T10:35:31.528Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777545361486,
+    "time": "2026-04-30T10:36:01.486Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1777549142466,
+    "time": "2026-04-30T11:39:02.466Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777549142488,
+    "time": "2026-04-30T11:39:02.488Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1777549142916,
+    "time": "2026-04-30T11:39:02.916Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1777549143149,
+    "time": "2026-04-30T11:39:03.149Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780592315417,
+    "time": "2026-06-04T16:58:35.417Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780592376934,
+    "time": "2026-06-04T16:59:36.934Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780592377126,
+    "time": "2026-06-04T16:59:37.126Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780592406785,
+    "time": "2026-06-04T17:00:06.785Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780592407043,
+    "time": "2026-06-04T17:00:07.043Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780592494663,
+    "time": "2026-06-04T17:01:34.663Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780592706064,
+    "time": "2026-06-04T17:05:06.064Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780592885242,
+    "time": "2026-06-04T17:08:05.242Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780592885937,
+    "time": "2026-06-04T17:08:05.937Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780592916833,
+    "time": "2026-06-04T17:08:36.833Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780592947605,
+    "time": "2026-06-04T17:09:07.605Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780593005003,
+    "time": "2026-06-04T17:10:05.003Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780593006102,
+    "time": "2026-06-04T17:10:06.102Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780593035885,
+    "time": "2026-06-04T17:10:35.885Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780593096702,
+    "time": "2026-06-04T17:11:36.702Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780593108461,
+    "time": "2026-06-04T17:11:48.461Z",
+    "type": "ROUTE_ACTION",
+    "route": 1780593096699.0186,
+    "action": "ACCEPT"
+  },
+  {
+    "id": 1780593155437,
+    "time": "2026-06-04T17:12:35.437Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780593215601,
+    "time": "2026-06-04T17:13:35.601Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780593216738,
+    "time": "2026-06-04T17:13:36.738Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780593246550,
+    "time": "2026-06-04T17:14:06.550Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780593247253,
+    "time": "2026-06-04T17:14:07.253Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780593275901,
+    "time": "2026-06-04T17:14:35.901Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780593366364,
+    "time": "2026-06-04T17:16:06.364Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780593425263,
+    "time": "2026-06-04T17:17:05.263Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780635292651,
+    "time": "2026-06-05T04:54:52.651Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780635323051,
+    "time": "2026-06-05T04:55:23.051Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780635324320,
+    "time": "2026-06-05T04:55:24.320Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780635324696,
+    "time": "2026-06-05T04:55:24.696Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780635353710,
+    "time": "2026-06-05T04:55:53.710Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780635564673,
+    "time": "2026-06-05T04:59:24.673Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780635565178,
+    "time": "2026-06-05T04:59:25.178Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780635593484,
+    "time": "2026-06-05T04:59:53.484Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780635683071,
+    "time": "2026-06-05T05:01:23.071Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780635684838,
+    "time": "2026-06-05T05:01:24.838Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780636940167,
+    "time": "2026-06-05T05:22:20.167Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780636960377,
+    "time": "2026-06-05T05:22:40.377Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780637055859,
+    "time": "2026-06-05T05:24:15.859Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780637079774,
+    "time": "2026-06-05T05:24:39.774Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780637230838,
+    "time": "2026-06-05T05:27:10.838Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780637259694,
+    "time": "2026-06-05T05:27:39.694Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780637260431,
+    "time": "2026-06-05T05:27:40.431Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780637305983,
+    "time": "2026-06-05T05:28:25.983Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780637381476,
+    "time": "2026-06-05T05:29:41.476Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780637382126,
+    "time": "2026-06-05T05:29:42.126Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780637528830,
+    "time": "2026-06-05T05:32:08.830Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780637532267,
+    "time": "2026-06-05T05:32:12.267Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780637564710,
+    "time": "2026-06-05T05:32:44.710Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780637565009,
+    "time": "2026-06-05T05:32:45.009Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780637590756,
+    "time": "2026-06-05T05:33:10.756Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780637648886,
+    "time": "2026-06-05T05:34:08.886Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780637709927,
+    "time": "2026-06-05T05:35:09.927Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780637740849,
+    "time": "2026-06-05T05:35:40.849Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780637830003,
+    "time": "2026-06-05T05:37:10.003Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780637859454,
+    "time": "2026-06-05T05:37:39.454Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780637860884,
+    "time": "2026-06-05T05:37:40.884Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780637893489,
+    "time": "2026-06-05T05:38:13.489Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780637923360,
+    "time": "2026-06-05T05:38:43.360Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780637984061,
+    "time": "2026-06-05T05:39:44.061Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780638039522,
+    "time": "2026-06-05T05:40:39.522Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780638104465,
+    "time": "2026-06-05T05:41:44.465Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780638164055,
+    "time": "2026-06-05T05:42:44.055Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780638219730,
+    "time": "2026-06-05T05:43:39.730Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780638220452,
+    "time": "2026-06-05T05:43:40.452Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780638254468,
+    "time": "2026-06-05T05:44:14.468Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780638311225,
+    "time": "2026-06-05T05:45:11.225Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780638339640,
+    "time": "2026-06-05T05:45:39.640Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780638370549,
+    "time": "2026-06-05T05:46:10.549Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780638460256,
+    "time": "2026-06-05T05:47:40.256Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780638549333,
+    "time": "2026-06-05T05:49:09.333Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780638549754,
+    "time": "2026-06-05T05:49:09.754Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780638579946,
+    "time": "2026-06-05T05:49:39.946Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780638627124,
+    "time": "2026-06-05T05:50:27.124Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780638701128,
+    "time": "2026-06-05T05:51:41.128Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780638733904,
+    "time": "2026-06-05T05:52:13.904Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780638858899,
+    "time": "2026-06-05T05:54:18.899Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780638882357,
+    "time": "2026-06-05T05:54:42.357Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780638910835,
+    "time": "2026-06-05T05:55:10.835Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780638941836,
+    "time": "2026-06-05T05:55:41.836Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780639029678,
+    "time": "2026-06-05T05:57:09.678Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780639030399,
+    "time": "2026-06-05T05:57:10.399Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780639030516,
+    "time": "2026-06-05T05:57:10.516Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780639089815,
+    "time": "2026-06-05T05:58:09.815Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780639119245,
+    "time": "2026-06-05T05:58:39.245Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780639149265,
+    "time": "2026-06-05T05:59:09.265Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780639149612,
+    "time": "2026-06-05T05:59:09.612Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780639180530,
+    "time": "2026-06-05T05:59:40.530Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780639180880,
+    "time": "2026-06-05T05:59:40.880Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780639300041,
+    "time": "2026-06-05T06:01:40.041Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780639359684,
+    "time": "2026-06-05T06:02:39.684Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780639360961,
+    "time": "2026-06-05T06:02:40.961Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780639390886,
+    "time": "2026-06-05T06:03:10.886Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780639420113,
+    "time": "2026-06-05T06:03:40.113Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780639569791,
+    "time": "2026-06-05T06:06:09.791Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780639599855,
+    "time": "2026-06-05T06:06:39.855Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780639629511,
+    "time": "2026-06-05T06:07:09.511Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780639630492,
+    "time": "2026-06-05T06:07:10.492Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780639810685,
+    "time": "2026-06-05T06:10:10.685Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780639839829,
+    "time": "2026-06-05T06:10:39.829Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780639869945,
+    "time": "2026-06-05T06:11:09.945Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780639960305,
+    "time": "2026-06-05T06:12:40.305Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780640050463,
+    "time": "2026-06-05T06:14:10.463Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780640319795,
+    "time": "2026-06-05T06:18:39.795Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780640351106,
+    "time": "2026-06-05T06:19:11.106Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780640380774,
+    "time": "2026-06-05T06:19:40.774Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780640470411,
+    "time": "2026-06-05T06:21:10.411Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780640470971,
+    "time": "2026-06-05T06:21:10.971Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780640530574,
+    "time": "2026-06-05T06:22:10.574Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780640591250,
+    "time": "2026-06-05T06:23:11.250Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780640710680,
+    "time": "2026-06-05T06:25:10.680Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780640740423,
+    "time": "2026-06-05T06:25:40.423Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780640740679,
+    "time": "2026-06-05T06:25:40.679Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780640770204,
+    "time": "2026-06-05T06:26:10.204Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780640800305,
+    "time": "2026-06-05T06:26:40.305Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780640830085,
+    "time": "2026-06-05T06:27:10.085Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780640830825,
+    "time": "2026-06-05T06:27:10.825Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780640831305,
+    "time": "2026-06-05T06:27:11.305Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780641009879,
+    "time": "2026-06-05T06:30:09.879Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780641070992,
+    "time": "2026-06-05T06:31:10.992Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780641071322,
+    "time": "2026-06-05T06:31:11.322Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780641071441,
+    "time": "2026-06-05T06:31:11.441Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780641101050,
+    "time": "2026-06-05T06:31:41.050Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780641220592,
+    "time": "2026-06-05T06:33:40.592Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780641250622,
+    "time": "2026-06-05T06:34:10.622Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780641280315,
+    "time": "2026-06-05T06:34:40.315Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780641340809,
+    "time": "2026-06-05T06:35:40.809Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780641401488,
+    "time": "2026-06-05T06:36:41.488Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780641431783,
+    "time": "2026-06-05T06:37:11.783Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780641432582,
+    "time": "2026-06-05T06:37:12.582Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780641460687,
+    "time": "2026-06-05T06:37:40.687Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780641461299,
+    "time": "2026-06-05T06:37:41.299Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780641490568,
+    "time": "2026-06-05T06:38:10.568Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780641490800,
+    "time": "2026-06-05T06:38:10.800Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780641550845,
+    "time": "2026-06-05T06:39:10.845Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780641580853,
+    "time": "2026-06-05T06:39:40.853Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780641640338,
+    "time": "2026-06-05T06:40:40.338Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780641640459,
+    "time": "2026-06-05T06:40:40.459Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780641671586,
+    "time": "2026-06-05T06:41:11.586Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780641701454,
+    "time": "2026-06-05T06:41:41.454Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780641760030,
+    "time": "2026-06-05T06:42:40.030Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780641790212,
+    "time": "2026-06-05T06:43:10.212Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780641821631,
+    "time": "2026-06-05T06:43:41.631Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780641880498,
+    "time": "2026-06-05T06:44:40.498Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780641940993,
+    "time": "2026-06-05T06:45:40.993Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780642000723,
+    "time": "2026-06-05T06:46:40.723Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780642060482,
+    "time": "2026-06-05T06:47:40.482Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780642091177,
+    "time": "2026-06-05T06:48:11.177Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780642120020,
+    "time": "2026-06-05T06:48:40.020Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780642150896,
+    "time": "2026-06-05T06:49:10.896Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780642181199,
+    "time": "2026-06-05T06:49:41.199Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780642211159,
+    "time": "2026-06-05T06:50:11.159Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780642270597,
+    "time": "2026-06-05T06:51:10.597Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780642390419,
+    "time": "2026-06-05T06:53:10.419Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780648817785,
+    "time": "2026-06-05T08:40:17.785Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780648877975,
+    "time": "2026-06-05T08:41:17.975Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780648906821,
+    "time": "2026-06-05T08:41:46.821Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780648907235,
+    "time": "2026-06-05T08:41:47.235Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780648907754,
+    "time": "2026-06-05T08:41:47.754Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780648967901,
+    "time": "2026-06-05T08:42:47.901Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780648997865,
+    "time": "2026-06-05T08:43:17.865Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780648998295,
+    "time": "2026-06-05T08:43:18.295Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780649027805,
+    "time": "2026-06-05T08:43:47.805Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780649027954,
+    "time": "2026-06-05T08:43:47.954Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780649028228,
+    "time": "2026-06-05T08:43:48.228Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780649056677,
+    "time": "2026-06-05T08:44:16.677Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780649086668,
+    "time": "2026-06-05T08:44:46.668Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780649176749,
+    "time": "2026-06-05T08:46:16.749Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780649178064,
+    "time": "2026-06-05T08:46:18.064Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780649237026,
+    "time": "2026-06-05T08:47:17.026Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780649266996,
+    "time": "2026-06-05T08:47:46.996Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780649296374,
+    "time": "2026-06-05T08:48:16.374Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780649297208,
+    "time": "2026-06-05T08:48:17.208Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780649326408,
+    "time": "2026-06-05T08:48:46.408Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780649327262,
+    "time": "2026-06-05T08:48:47.262Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780649356366,
+    "time": "2026-06-05T08:49:16.366Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780649357285,
+    "time": "2026-06-05T08:49:17.285Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780649389179,
+    "time": "2026-06-05T08:49:49.179Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780649477423,
+    "time": "2026-06-05T08:51:17.423Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780649507274,
+    "time": "2026-06-05T08:51:47.274Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780649508079,
+    "time": "2026-06-05T08:51:48.079Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780649538410,
+    "time": "2026-06-05T08:52:18.410Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780649746493,
+    "time": "2026-06-05T08:55:46.493Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780649866766,
+    "time": "2026-06-05T08:57:46.766Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780649927976,
+    "time": "2026-06-05T08:58:47.976Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780649957912,
+    "time": "2026-06-05T08:59:17.912Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780650017213,
+    "time": "2026-06-05T09:00:17.213Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780650018496,
+    "time": "2026-06-05T09:00:18.496Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780650078373,
+    "time": "2026-06-05T09:01:18.373Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780650505513,
+    "time": "2026-06-05T09:08:25.513Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780650596374,
+    "time": "2026-06-05T09:09:56.374Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780650626327,
+    "time": "2026-06-05T09:10:26.327Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780650656254,
+    "time": "2026-06-05T09:10:56.254Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780650687667,
+    "time": "2026-06-05T09:11:27.667Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780650688520,
+    "time": "2026-06-05T09:11:28.520Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780650805382,
+    "time": "2026-06-05T09:13:25.382Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780650836770,
+    "time": "2026-06-05T09:13:56.770Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780651018817,
+    "time": "2026-06-05T09:16:58.817Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651106009,
+    "time": "2026-06-05T09:18:26.009Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780651166586,
+    "time": "2026-06-05T09:19:26.586Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651226173,
+    "time": "2026-06-05T09:20:26.173Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780651285543,
+    "time": "2026-06-05T09:21:25.543Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780651347791,
+    "time": "2026-06-05T09:22:27.791Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780651376366,
+    "time": "2026-06-05T09:22:56.366Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780651435302,
+    "time": "2026-06-05T09:23:55.302Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780651495461,
+    "time": "2026-06-05T09:24:55.461Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780651525256,
+    "time": "2026-06-05T09:25:25.256Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780651555278,
+    "time": "2026-06-05T09:25:55.278Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780651585164,
+    "time": "2026-06-05T09:26:25.164Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780651585830,
+    "time": "2026-06-05T09:26:25.830Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780651615849,
+    "time": "2026-06-05T09:26:55.849Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780651616740,
+    "time": "2026-06-05T09:26:56.740Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780651646954,
+    "time": "2026-06-05T09:27:26.954Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651676011,
+    "time": "2026-06-05T09:27:56.011Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780651676508,
+    "time": "2026-06-05T09:27:56.508Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651705994,
+    "time": "2026-06-05T09:28:25.994Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780651707453,
+    "time": "2026-06-05T09:28:27.453Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651736389,
+    "time": "2026-06-05T09:28:56.389Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780651796424,
+    "time": "2026-06-05T09:29:56.424Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780651915498,
+    "time": "2026-06-05T09:31:55.498Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780651916877,
+    "time": "2026-06-05T09:31:56.877Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780651975268,
+    "time": "2026-06-05T09:32:55.268Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652186082,
+    "time": "2026-06-05T09:36:26.082Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780652216431,
+    "time": "2026-06-05T09:36:56.431Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780652217365,
+    "time": "2026-06-05T09:36:57.365Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780652245653,
+    "time": "2026-06-05T09:37:25.653Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780652305761,
+    "time": "2026-06-05T09:38:25.761Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780652305871,
+    "time": "2026-06-05T09:38:25.871Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780652365621,
+    "time": "2026-06-05T09:39:25.621Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652395598,
+    "time": "2026-06-05T09:39:55.598Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780652425597,
+    "time": "2026-06-05T09:40:25.597Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780652485383,
+    "time": "2026-06-05T09:41:25.383Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652515403,
+    "time": "2026-06-05T09:41:55.403Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652546617,
+    "time": "2026-06-05T09:42:26.617Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780652606668,
+    "time": "2026-06-05T09:43:26.668Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780652635436,
+    "time": "2026-06-05T09:43:55.436Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652695665,
+    "time": "2026-06-05T09:44:55.665Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780652727546,
+    "time": "2026-06-05T09:45:27.546Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780652756554,
+    "time": "2026-06-05T09:45:56.554Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780652815481,
+    "time": "2026-06-05T09:46:55.481Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652845507,
+    "time": "2026-06-05T09:47:25.507Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652875522,
+    "time": "2026-06-05T09:47:55.522Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652876417,
+    "time": "2026-06-05T09:47:56.417Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780652876539,
+    "time": "2026-06-05T09:47:56.539Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780652905537,
+    "time": "2026-06-05T09:48:25.537Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780652906443,
+    "time": "2026-06-05T09:48:26.443Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780652906561,
+    "time": "2026-06-05T09:48:26.561Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780652935963,
+    "time": "2026-06-05T09:48:55.963Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780652936428,
+    "time": "2026-06-05T09:48:56.428Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780652967122,
+    "time": "2026-06-05T09:49:27.122Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780652996893,
+    "time": "2026-06-05T09:49:56.893Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780653118174,
+    "time": "2026-06-05T09:51:58.174Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780653145676,
+    "time": "2026-06-05T09:52:25.676Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780653145878,
+    "time": "2026-06-05T09:52:25.878Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780653236713,
+    "time": "2026-06-05T09:53:56.713Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653265710,
+    "time": "2026-06-05T09:54:25.710Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780653266744,
+    "time": "2026-06-05T09:54:26.744Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653326424,
+    "time": "2026-06-05T09:55:26.424Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780653416490,
+    "time": "2026-06-05T09:56:56.490Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780653416694,
+    "time": "2026-06-05T09:56:56.694Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653446770,
+    "time": "2026-06-05T09:57:26.770Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653476776,
+    "time": "2026-06-05T09:57:56.776Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653506794,
+    "time": "2026-06-05T09:58:26.794Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780653536908,
+    "time": "2026-06-05T09:58:56.908Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780653626574,
+    "time": "2026-06-05T10:00:26.574Z",
+    "type": "ANOMALY",
+    "node": "Dubai",
+    "description": "Dubai risk continuously rising"
+  },
+  {
+    "id": 1780653715829,
+    "time": "2026-06-05T10:01:55.829Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780653716991,
+    "time": "2026-06-05T10:01:56.991Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780653835999,
+    "time": "2026-06-05T10:03:55.999Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780653897369,
+    "time": "2026-06-05T10:04:57.369Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780653926136,
+    "time": "2026-06-05T10:05:26.136Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780653927046,
+    "time": "2026-06-05T10:05:27.046Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780654016560,
+    "time": "2026-06-05T10:06:56.560Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780654106379,
+    "time": "2026-06-05T10:08:26.379Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780654106672,
+    "time": "2026-06-05T10:08:26.672Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780654136373,
+    "time": "2026-06-05T10:08:56.373Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780654197141,
+    "time": "2026-06-05T10:09:57.141Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780654316165,
+    "time": "2026-06-05T10:11:56.165Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780654406299,
+    "time": "2026-06-05T10:13:26.299Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780654406770,
+    "time": "2026-06-05T10:13:26.770Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780654526614,
+    "time": "2026-06-05T10:15:26.614Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780655020923,
+    "time": "2026-06-05T10:23:40.923Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780655050062,
+    "time": "2026-06-05T10:24:10.062Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780655081215,
+    "time": "2026-06-05T10:24:41.215Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780655111316,
+    "time": "2026-06-05T10:25:11.316Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780655200860,
+    "time": "2026-06-05T10:26:40.860Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780655259897,
+    "time": "2026-06-05T10:27:39.897Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780655260736,
+    "time": "2026-06-05T10:27:40.736Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780655261525,
+    "time": "2026-06-05T10:27:41.525Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780655291544,
+    "time": "2026-06-05T10:28:11.544Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780655320998,
+    "time": "2026-06-05T10:28:40.998Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780655321252,
+    "time": "2026-06-05T10:28:41.252Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780655412258,
+    "time": "2026-06-05T10:30:12.258Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780655441415,
+    "time": "2026-06-05T10:30:41.415Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780655681435,
+    "time": "2026-06-05T10:34:41.435Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780655800339,
+    "time": "2026-06-05T10:36:40.339Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780655830733,
+    "time": "2026-06-05T10:37:10.733Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780655860772,
+    "time": "2026-06-05T10:37:40.772Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780655890232,
+    "time": "2026-06-05T10:38:10.232Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780655920082,
+    "time": "2026-06-05T10:38:40.082Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780655921021,
+    "time": "2026-06-05T10:38:41.021Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780655950081,
+    "time": "2026-06-05T10:39:10.081Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780655950427,
+    "time": "2026-06-05T10:39:10.427Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780655981178,
+    "time": "2026-06-05T10:39:41.178Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780656010297,
+    "time": "2026-06-05T10:40:10.297Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780656011202,
+    "time": "2026-06-05T10:40:11.202Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780656040323,
+    "time": "2026-06-05T10:40:40.323Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780656131003,
+    "time": "2026-06-05T10:42:11.003Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780656161545,
+    "time": "2026-06-05T10:42:41.545Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780656221615,
+    "time": "2026-06-05T10:43:41.615Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780656250868,
+    "time": "2026-06-05T10:44:10.868Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780656251004,
+    "time": "2026-06-05T10:44:11.004Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780656251725,
+    "time": "2026-06-05T10:44:11.725Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780656280922,
+    "time": "2026-06-05T10:44:40.922Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780656371315,
+    "time": "2026-06-05T10:46:11.315Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780656400806,
+    "time": "2026-06-05T10:46:40.806Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780656401677,
+    "time": "2026-06-05T10:46:41.677Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780656431719,
+    "time": "2026-06-05T10:47:11.719Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780656490529,
+    "time": "2026-06-05T10:48:10.529Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780656521438,
+    "time": "2026-06-05T10:48:41.438Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780656581110,
+    "time": "2026-06-05T10:49:41.110Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780656581362,
+    "time": "2026-06-05T10:49:41.362Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780656671455,
+    "time": "2026-06-05T10:51:11.455Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780656701660,
+    "time": "2026-06-05T10:51:41.660Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780656820960,
+    "time": "2026-06-05T10:53:40.960Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780656850871,
+    "time": "2026-06-05T10:54:10.871Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780657031231,
+    "time": "2026-06-05T10:57:11.231Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780657150399,
+    "time": "2026-06-05T10:59:10.399Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780657180974,
+    "time": "2026-06-05T10:59:40.974Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780657210511,
+    "time": "2026-06-05T11:00:10.511Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780657302314,
+    "time": "2026-06-05T11:01:42.314Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780657302448,
+    "time": "2026-06-05T11:01:42.448Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780657332017,
+    "time": "2026-06-05T11:02:12.017Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780657592552,
+    "time": "2026-06-05T11:06:32.552Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780657622265,
+    "time": "2026-06-05T11:07:02.265Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780657622421,
+    "time": "2026-06-05T11:07:02.421Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780657652372,
+    "time": "2026-06-05T11:07:32.372Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780657652920,
+    "time": "2026-06-05T11:07:32.920Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780657742352,
+    "time": "2026-06-05T11:09:02.352Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780657803176,
+    "time": "2026-06-05T11:10:03.176Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780657862261,
+    "time": "2026-06-05T11:11:02.261Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780657891844,
+    "time": "2026-06-05T11:11:31.844Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780657921860,
+    "time": "2026-06-05T11:12:01.860Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780657952582,
+    "time": "2026-06-05T11:12:32.582Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780657982096,
+    "time": "2026-06-05T11:13:02.096Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780657983436,
+    "time": "2026-06-05T11:13:03.436Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780658013481,
+    "time": "2026-06-05T11:13:33.481Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780658072857,
+    "time": "2026-06-05T11:14:32.857Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780658102815,
+    "time": "2026-06-05T11:15:02.815Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780658283144,
+    "time": "2026-06-05T11:18:03.144Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780658342138,
+    "time": "2026-06-05T11:19:02.138Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780658402559,
+    "time": "2026-06-05T11:20:02.559Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780658403308,
+    "time": "2026-06-05T11:20:03.308Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780658581850,
+    "time": "2026-06-05T11:23:01.850Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780658611894,
+    "time": "2026-06-05T11:23:31.894Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780658613030,
+    "time": "2026-06-05T11:23:33.030Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780658641869,
+    "time": "2026-06-05T11:24:01.869Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780658642691,
+    "time": "2026-06-05T11:24:02.691Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780658792384,
+    "time": "2026-06-05T11:26:32.384Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780658913841,
+    "time": "2026-06-05T11:28:33.841Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780658943292,
+    "time": "2026-06-05T11:29:03.292Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780658943658,
+    "time": "2026-06-05T11:29:03.658Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780658973302,
+    "time": "2026-06-05T11:29:33.302Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780659002443,
+    "time": "2026-06-05T11:30:02.443Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780659004317,
+    "time": "2026-06-05T11:30:04.317Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780659032490,
+    "time": "2026-06-05T11:30:32.490Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780659032852,
+    "time": "2026-06-05T11:30:32.852Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780659033347,
+    "time": "2026-06-05T11:30:33.347Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780659062625,
+    "time": "2026-06-05T11:31:02.625Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780659062901,
+    "time": "2026-06-05T11:31:02.901Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780659063038,
+    "time": "2026-06-05T11:31:03.038Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780659092702,
+    "time": "2026-06-05T11:31:32.702Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780659092828,
+    "time": "2026-06-05T11:31:32.828Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780659122196,
+    "time": "2026-06-05T11:32:02.196Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780659152199,
+    "time": "2026-06-05T11:32:32.199Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780659153158,
+    "time": "2026-06-05T11:32:33.158Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780659213455,
+    "time": "2026-06-05T11:33:33.455Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780659243484,
+    "time": "2026-06-05T11:34:03.484Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780659243620,
+    "time": "2026-06-05T11:34:03.620Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780659272806,
+    "time": "2026-06-05T11:34:32.806Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780659273478,
+    "time": "2026-06-05T11:34:33.478Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780659273838,
+    "time": "2026-06-05T11:34:33.838Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780659303272,
+    "time": "2026-06-05T11:35:03.272Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780659303492,
+    "time": "2026-06-05T11:35:03.492Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780659363754,
+    "time": "2026-06-05T11:36:03.754Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780659422399,
+    "time": "2026-06-05T11:37:02.399Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780659452345,
+    "time": "2026-06-05T11:37:32.345Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780659485429,
+    "time": "2026-06-05T11:38:05.429Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780659513619,
+    "time": "2026-06-05T11:38:33.619Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780659632355,
+    "time": "2026-06-05T11:40:32.355Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780659632757,
+    "time": "2026-06-05T11:40:32.757Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780659664049,
+    "time": "2026-06-05T11:41:04.049Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780659752457,
+    "time": "2026-06-05T11:42:32.457Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780659782203,
+    "time": "2026-06-05T11:43:02.203Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780659812235,
+    "time": "2026-06-05T11:43:32.235Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780659904924,
+    "time": "2026-06-05T11:45:04.924Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780659933573,
+    "time": "2026-06-05T11:45:33.573Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780659933972,
+    "time": "2026-06-05T11:45:33.972Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780660023231,
+    "time": "2026-06-05T11:47:03.231Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780660084020,
+    "time": "2026-06-05T11:48:04.020Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780660084290,
+    "time": "2026-06-05T11:48:04.290Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780660203792,
+    "time": "2026-06-05T11:50:03.792Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780660203967,
+    "time": "2026-06-05T11:50:03.967Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780660324922,
+    "time": "2026-06-05T11:52:04.922Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780660545788,
+    "time": "2026-06-05T11:55:45.788Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780660605221,
+    "time": "2026-06-05T11:56:45.221Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780660695939,
+    "time": "2026-06-05T11:58:15.939Z",
+    "type": "ANOMALY",
+    "node": "San Francisco",
+    "description": "San Francisco risk continuously rising"
+  },
+  {
+    "id": 1780673707771,
+    "time": "2026-06-05T15:35:07.771Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780673793011,
+    "time": "2026-06-05T15:36:33.011Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780673794632,
+    "time": "2026-06-05T15:36:34.632Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780673823075,
+    "time": "2026-06-05T15:37:03.075Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780673855350,
+    "time": "2026-06-05T15:37:35.350Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780673856519,
+    "time": "2026-06-05T15:37:36.519Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780673885575,
+    "time": "2026-06-05T15:38:05.575Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780674006464,
+    "time": "2026-06-05T15:40:06.464Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780674034433,
+    "time": "2026-06-05T15:40:34.433Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780674156189,
+    "time": "2026-06-05T15:42:36.189Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780674214555,
+    "time": "2026-06-05T15:43:34.555Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780674245300,
+    "time": "2026-06-05T15:44:05.300Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780674314915,
+    "time": "2026-06-05T15:45:14.915Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780674363308,
+    "time": "2026-06-05T15:46:03.308Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780674455250,
+    "time": "2026-06-05T15:47:35.250Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780674455465,
+    "time": "2026-06-05T15:47:35.465Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780674485118,
+    "time": "2026-06-05T15:48:05.118Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780674546997,
+    "time": "2026-06-05T15:49:06.997Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780674784636,
+    "time": "2026-06-05T15:53:04.636Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780674785575,
+    "time": "2026-06-05T15:53:05.575Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780674843360,
+    "time": "2026-06-05T15:54:03.360Z",
+    "type": "ANOMALY",
+    "node": "Singapore",
+    "description": "Singapore risk continuously rising"
+  },
+  {
+    "id": 1780674934861,
+    "time": "2026-06-05T15:55:34.861Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780674935072,
+    "time": "2026-06-05T15:55:35.072Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780674994169,
+    "time": "2026-06-05T15:56:34.169Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780675023654,
+    "time": "2026-06-05T15:57:03.654Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780675024180,
+    "time": "2026-06-05T15:57:04.180Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780675054848,
+    "time": "2026-06-05T15:57:34.848Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780675115257,
+    "time": "2026-06-05T15:58:35.257Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780675204301,
+    "time": "2026-06-05T16:00:04.301Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780675205496,
+    "time": "2026-06-05T16:00:05.496Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780675234080,
+    "time": "2026-06-05T16:00:34.080Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780675531626,
+    "time": "2026-06-05T16:05:31.626Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780675558618,
+    "time": "2026-06-05T16:05:58.618Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780675650126,
+    "time": "2026-06-05T16:07:30.126Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780675681873,
+    "time": "2026-06-05T16:08:01.873Z",
+    "type": "ANOMALY",
+    "node": "Melbourne",
+    "description": "Melbourne risk continuously rising"
+  },
+  {
+    "id": 1780675742111,
+    "time": "2026-06-05T16:09:02.111Z",
+    "type": "ANOMALY",
+    "node": "Tokyo",
+    "description": "Tokyo risk continuously rising"
+  },
+  {
+    "id": 1780675803794,
+    "time": "2026-06-05T16:10:03.794Z",
+    "type": "ANOMALY",
+    "node": "Durban",
+    "description": "Durban risk continuously rising"
+  },
+  {
+    "id": 1780675889272,
+    "time": "2026-06-05T16:11:29.272Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780675920148,
+    "time": "2026-06-05T16:12:00.148Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780675983246,
+    "time": "2026-06-05T16:13:03.246Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780675984910,
+    "time": "2026-06-05T16:13:04.910Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780676070359,
+    "time": "2026-06-05T16:14:30.359Z",
+    "type": "ANOMALY",
+    "node": "Antwerp",
+    "description": "Antwerp risk continuously rising"
+  },
+  {
+    "id": 1780676103574,
+    "time": "2026-06-05T16:15:03.574Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780676104060,
+    "time": "2026-06-05T16:15:04.060Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780676519941,
+    "time": "2026-06-05T16:21:59.941Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780676549904,
+    "time": "2026-06-05T16:22:29.904Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780676609707,
+    "time": "2026-06-05T16:23:29.707Z",
+    "type": "ANOMALY",
+    "node": "Shanghai",
+    "description": "Shanghai risk continuously rising"
+  },
+  {
+    "id": 1780676668843,
+    "time": "2026-06-05T16:24:28.843Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780676700762,
+    "time": "2026-06-05T16:25:00.762Z",
+    "type": "ANOMALY",
+    "node": "Los Angeles",
+    "description": "Los Angeles risk continuously rising"
+  },
+  {
+    "id": 1780676789678,
+    "time": "2026-06-05T16:26:29.678Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780676819660,
+    "time": "2026-06-05T16:26:59.660Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780676821741,
+    "time": "2026-06-05T16:27:01.741Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780676851754,
+    "time": "2026-06-05T16:27:31.754Z",
+    "type": "ANOMALY",
+    "node": "Busan",
+    "description": "Busan risk continuously rising"
+  },
+  {
+    "id": 1780676879197,
+    "time": "2026-06-05T16:27:59.197Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780676910910,
+    "time": "2026-06-05T16:28:30.910Z",
+    "type": "ANOMALY",
+    "node": "Vancouver",
+    "description": "Vancouver risk continuously rising"
+  },
+  {
+    "id": 1780676970906,
+    "time": "2026-06-05T16:29:30.906Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780677001280,
+    "time": "2026-06-05T16:30:01.280Z",
+    "type": "ANOMALY",
+    "node": "Santos",
+    "description": "Santos risk continuously rising"
+  },
+  {
+    "id": 1780677059198,
+    "time": "2026-06-05T16:30:59.198Z",
+    "type": "ANOMALY",
+    "node": "Sydney",
+    "description": "Sydney risk continuously rising"
+  },
+  {
+    "id": 1780677337456,
+    "time": "2026-06-05T16:35:37.456Z",
+    "type": "ANOMALY",
+    "node": "New York",
+    "description": "New York risk continuously rising"
+  },
+  {
+    "id": 1780677370402,
+    "time": "2026-06-05T16:36:10.402Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780677400206,
+    "time": "2026-06-05T16:36:40.206Z",
+    "type": "ANOMALY",
+    "node": "Cape Town",
+    "description": "Cape Town risk continuously rising"
+  },
+  {
+    "id": 1780677549156,
+    "time": "2026-06-05T16:39:09.156Z",
+    "type": "ANOMALY",
+    "node": "Rotterdam",
+    "description": "Rotterdam risk continuously rising"
+  },
+  {
+    "id": 1780677787111,
+    "time": "2026-06-05T16:43:07.111Z",
+    "type": "ANOMALY",
+    "node": "Jeddah",
+    "description": "Jeddah risk continuously rising"
+  },
+  {
+    "id": 1780677940970,
+    "time": "2026-06-05T16:45:40.970Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780677941253,
+    "time": "2026-06-05T16:45:41.253Z",
+    "type": "ANOMALY",
+    "node": "Hong Kong",
+    "description": "Hong Kong risk continuously rising"
+  },
+  {
+    "id": 1780677969771,
+    "time": "2026-06-05T16:46:09.771Z",
+    "type": "ANOMALY",
+    "node": "Hamburg",
+    "description": "Hamburg risk continuously rising"
+  },
+  {
+    "id": 1780677997962,
+    "time": "2026-06-05T16:46:37.962Z",
+    "type": "ANOMALY",
+    "node": "Mumbai",
+    "description": "Mumbai risk continuously rising"
+  }
+]

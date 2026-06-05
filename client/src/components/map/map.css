@@ -1,0 +1,14 @@
+.ripple-node {
+  animation: ripple 1s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% {
+    r: 10;
+    opacity: 1;
+  }
+  100% {
+    r: 30;
+    opacity: 0;
+  }
+}

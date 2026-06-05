@@ -1,0 +1,39 @@
+# ===== Client (React) =====
+client/node_modules/
+client/build/
+client/dist/
+client/.env
+client/.env.*
+client/*.log
+
+# ===== Server (FastAPI / Python) =====
+server/__pycache__/
+server/*.pyc
+server/*.pyo
+server/*.pyd
+server/.venv/
+server/venv/
+server/env/
+server/.env
+server/.env.*
+server/*.log
+
+# ===== Model / data artifacts =====
+*.pkl
+*.pickle
+*.joblib
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Common =====
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.env
+.env.*
