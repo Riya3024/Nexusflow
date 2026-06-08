@@ -29,30 +29,46 @@ async function getBatchMLRisk(nodes) {
       const ships = rf.shipDensity || 0;
       const delay = rf.delayRate || 0;
 
-      const key = getCacheKey({ weather, traffic, ships, delay });
+      const key = getCacheKey({
+        weather,
+        traffic,
+        ships,
+        delay
+      });
 
       if (cache.has(key)) {
         results[index] = cache.get(key);
       } else {
-        inputs.push({ weather, traffic, ships, delay, index, key });
+        inputs.push({
+          weather,
+          traffic,
+          ships,
+          delay,
+          index,
+          key
+        });
       }
     });
 
-    // 🔥 CALL ML API
     if (inputs.length > 0) {
-      const res = await mlClient.post("/predict-batch", {
-        nodes: inputs.map(i => ({
-          weather: i.weather,
-          traffic: i.traffic,
-          ships: i.ships,
-          delay: i.delay
-        }))
-      });
+
+      const res = await mlClient.post(
+        "/predict-batch",
+        {
+          nodes: inputs.map(i => ({
+            weather: i.weather,
+            traffic: i.traffic,
+            ships: i.ships,
+            delay: i.delay
+          }))
+        }
+      );
 
       const preds = res.data.predictions;
 
       inputs.forEach((item, i) => {
-        const value = Number(preds[i].toFixed(2));
+        const value =
+          Number(preds[i].toFixed(2));
 
         cache.set(item.key, value);
         results[item.index] = value;
@@ -62,11 +78,32 @@ async function getBatchMLRisk(nodes) {
     return results;
 
   } catch (err) {
-    console.error("❌ ML ERROR:", err.message);
 
-    return nodes.map(n => fallbackRisk(n));
+    console.error(
+      "❌ ML ERROR:",
+      err.message
+    );
+
+    if (err.response) {
+      console.error(
+        "Response:",
+        err.response.data
+      );
+    }
+
+    // fallback risk for every node
+    return nodes.map(n =>
+      fallbackRisk(n)
+    );
   }
 }
+
+    
+
+      
+
+  
+
 
 // ==========================
 // 🔥 FALLBACK (IMPORTANT)

@@ -7207,5 +7207,89 @@
     "type": "ANOMALY",
     "node": "Mumbai",
     "description": "Mumbai risk continuously rising"
+  },
+  {
+    "id": 1780897112028,
+    "time": "2026-06-08T05:38:32.028Z",
+    "type": "CASCADE",
+    "node": "Melbourne",
+    "result": []
+  },
+  {
+    "id": 1780897147460,
+    "time": "2026-06-08T05:39:07.460Z",
+    "type": "CASCADE",
+    "node": "New York",
+    "result": []
+  },
+  {
+    "id": 1780897449309,
+    "time": "2026-06-08T05:44:09.309Z",
+    "type": "CASCADE",
+    "node": "New York",
+    "result": [
+      {
+        "rank": 1,
+        "path": [
+          "new_york",
+          "busan",
+          "shanghai"
+        ],
+        "risk": 14,
+        "time": "fast",
+        "reason": "Utilizes efficient direct routes between low-congestion ports."
+      },
+      {
+        "rank": 2,
+        "path": [
+          "los_angeles",
+          "vancouver",
+          "sydney"
+        ],
+        "risk": 27,
+        "time": "moderate",
+        "reason": "Standard trans-Pacific route with moderate port traffic."
+      },
+      {
+        "rank": 3,
+        "path": [
+          "singapore",
+          "dubai",
+          "jeddah"
+        ],
+        "risk": 33,
+        "time": "slow",
+        "reason": "Passes through high congestion and high weather risk zones in Southeast Asia and Middle East."
+      },
+      {
+        "rank": 4,
+        "path": [
+          "antwerp",
+          "rotterdam",
+          "hamburg"
+        ],
+        "risk": 29,
+        "time": "moderate",
+        "reason": "Common European shipping corridor with standard transit times."
+      },
+      {
+        "rank": 5,
+        "path": [
+          "melbourne",
+          "cape_town",
+          "santos"
+        ],
+        "risk": 26,
+        "time": "slow",
+        "reason": "Long oceanic transit across multiple climate zones, including high weather severity at Cape Town."
+      }
+    ]
+  },
+  {
+    "id": 1780897450689,
+    "time": "2026-06-08T05:44:10.689Z",
+    "type": "CASCADE",
+    "node": "New York",
+    "result": []
   }
 ]

@@ -8,7 +8,7 @@ async function callGemini(prompt, retries = 3) {
 
     // 🔥 ADD TIMEOUT (production safe)
     const controller = new AbortController();
-    setTimeout(() => controller.abort(), 15000);
+    setTimeout(() => controller.abort(), 45000);
 
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
@@ -35,25 +35,37 @@ async function callGemini(prompt, retries = 3) {
     // ❌ API ERROR
     if (data.error) {
 
-      if (data.error.code === 503 && retries > 0) {
-        console.log(`🔁 Retrying Gemini... (${retries})`);
-        await sleep(1000);
-        return callGemini(prompt, retries - 1);
-      }
+  console.error(
+    "❌ GEMINI API ERROR:",
+    data.error.message
+  );
 
-      console.error("❌ GEMINI API ERROR:", data.error.message);
-      return "AI service unavailable";
-    }
+  return JSON.stringify({
+    affectedPorts: [
+      "Dubai",
+      "Singapore",
+      "Rotterdam"
+    ],
+    reason: [
+      "Fallback Mode",
+      "Gemini quota exceeded"
+    ]
+  });
+}
 
     const text =
       data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
     return text || "AI could not generate response";
 
-  } catch (error) {
-    console.error("❌ GEMINI FETCH ERROR:", error);
-    return "AI failed due to network issue";
-  }
+  } catch(error){
+  console.error("❌ GEMINI FETCH ERROR:", error);
+
+  return JSON.stringify({
+    affectedPorts: [],
+    reason: ["Gemini unavailable"]
+  });
+}
 }
 
 // ==========================
@@ -100,43 +112,48 @@ Return STRICT JSON:
 // ==========================
 async function getCascadeAnalysis(node, nodes) {
 
-  const prompt = `
-Return ONLY valid JSON.
-No text. No explanation. No markdown.
+  try {
 
-Format:
-[
-  {
-    "rank": 1,
-    "path": ["A","B","C"],
-    "risk": 30,
-    "time": "fast",
-    "reason": "Avoids congestion"
-  }
-]
+    const prompt = `
+You are a logistics AI.
 
-Current Route:
-${JSON.stringify(route)}
+A logistics hub has failed.
 
-Nodes:
+Failed Node:
+${JSON.stringify(node)}
+
+All Nodes:
 ${JSON.stringify(nodes)}
+
+Return JSON:
+
+{
+  "affectedPorts": [],
+  "reason": []
+}
 `;
 
-  const ai = await callGemini(prompt);
+    const ai = await callGemini(prompt);
 
-  // 🔥 HANDLE ALL FAIL CASES
-  if (
-    !ai ||
-    ai.includes("unavailable") ||
-    ai.includes("Quota") ||
-    ai.includes("429")
-  ) {
-    console.log("⚠️ Using fallback cascade");
+    const parsed = safeJsonParse(ai);
+
+    if (!parsed) {
+      return fallbackCascade(node, nodes);
+    }
+
+    return parsed;
+
+  } catch (err) {
+
+    console.error("CASCADE ANALYSIS ERROR:", err);
+
     return fallbackCascade(node, nodes);
   }
-
-  return safeJsonParse(ai);
 }
+
+
+
+  
 
 
 // ==========================
@@ -144,43 +161,26 @@ ${JSON.stringify(nodes)}
 // ==========================
 async function askGemini(question, systemState) {
 
-  // ✅ FIX: CORRECT PROMPT (WAS WRONG)
   const prompt = `
-You are a logistics AI.
+You are NexusFlow AI.
 
-Given this safest route from Dijkstra:
-${JSON.stringify(route)}
+Current System State:
+${JSON.stringify(systemState)}
 
-And node risk data:
-${JSON.stringify(nodes)}
+User Question:
+${question}
 
-Generate 3 better alternative routes.
-
-Rules:
-- Minimize risk
-- Avoid congestion
-- Provide different paths
-
-Return STRICT JSON:
-
-[
-  {
-    "rank": 1,
-    "path": ["node1","node2","node3"],
-    "newRiskScore": 40,
-    "reason": "Avoids congestion at hub X"
-  }
-]
+Answer clearly and briefly.
 `;
 
-  const ai = await callGemini(prompt);
-
-if (!ai || ai.includes("unavailable")) {
-  return fallbackCascade(node, nodes);
+  return await callGemini(prompt);
 }
 
-return safeJsonParse(ai);
-}
+  // ✅ FIX: CORRECT PROMPT (WAS WRONG)
+
+  
+
+ 
 
 // ==========================
 // 🛠 SAFE JSON PARSER
@@ -210,8 +210,20 @@ function safeJsonParse(text) {
 // 🔥 FALLBACK ENGINE
 // ==========================
 function fallbackCascade(node, nodes) {
+
+  if (!node || !nodes) {
+    return {
+      affectedPorts: [],
+      reason: ["Insufficient data"]
+    };
+  }
+
   const affected = nodes
-    .filter(n => n.region === node.region)
+    .filter(
+      n =>
+        n.id !== node.id &&
+        n.region === node.region
+    )
     .map(n => n.name);
 
   return {
@@ -238,5 +250,6 @@ module.exports = {
   callGemini,
   getRouteAlternatives,
   getCascadeAnalysis,
-  askGemini
+  askGemini,
+  safeJsonParse
 };

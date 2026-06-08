@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./components/dashboard/Dashboard";
 
+
+
 import RoutesPage from "./pages/Routes";
 import Simulate from "./pages/Simulate";
 import Analytics from "./pages/Analytics";
@@ -54,6 +56,7 @@ export default function App() {
     <BrowserRouter>
 
       <Routes>
+       
 
         {/* AUTH PAGES */}
         <Route path="/" element={<Login />} />

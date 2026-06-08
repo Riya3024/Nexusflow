@@ -127,34 +127,41 @@ module.exports = function (appState) {
 
   // ================= CASCADE =================
   router.post("/cascade", async (req, res) => {
-    try {
-      const { node } = req.body;
-      const nodes = appState.nodes;
 
+  try {
 
+    console.log("CASCADE BODY:", req.body);
 
-      const result = await getCascadeAnalysis(node, nodes);
+    const { node } = req.body;
 
+    const nodes = appState.nodes;
 
+    const result =
+      await getCascadeAnalysis(
+        node,
+        nodes
+      );
 
-      // 🔥 REPLACE OLD LOG WITH THIS
-      addAudit({
-        type: "CASCADE",
-        node: node.name,
-        result
-      });
+    res.json({
+      success: true,
+      data: result
+  
+    });
 
+  } catch (err) {
 
+    console.error(
+      "CASCADE FULL ERROR:",
+      err
+    );
 
-      res.json({ data: result });
-
-
-
-    } catch (err) {
-      console.error("CASCADE ERROR:", err);
-      res.status(500).json({ error: "Cascade failed" });
-    }
-  });
+    res.status(500).json({
+      success: false,
+      error: err.message
+    });
+  }
+});
+      
 
 
 

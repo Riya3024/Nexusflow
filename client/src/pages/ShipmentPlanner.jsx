@@ -1,106 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL;
-
-const CITY_LIST = [
-  "Mumbai",
-  "Chennai",
-  "Bangalore",
-  "Delhi",
-  "Kolkata",
-  "Hyderabad",
-  "Singapore",
-  "Dubai",
-  "Shanghai",
-  "Rotterdam"
-];
-
-function CityAutocomplete({
-  label,
-  value,
-  onChange,
-  placeholder = "Search city..."
-}) {
-  const [open, setOpen] = useState(false);
-
-  const filteredCities = CITY_LIST.filter((city) =>
-    city.toLowerCase().includes(value.toLowerCase())
-  );
-
-  const handleSelect = (city) => {
-    onChange(city);
-    setOpen(false);
-  };
-
-  return (
-    <div style={{ position: "relative", width: "100%" }}>
-      <label style={{ display: "block", marginBottom: 6, color: "white" }}>
-        {label}
-      </label>
-
-      <input
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => {
-          onChange(e.target.value);
-          setOpen(true);
-        }}
-        onFocus={() => setOpen(true)}
-        autoComplete="off"
-        style={{
-          width: "100%",
-          padding: "10px 12px",
-          borderRadius: 8,
-          border: "1px solid #334155",
-          background: "#0f172a",
-          color: "white",
-          outline: "none",
-          boxSizing: "border-box"
-        }}
-      />
-
-      {open && filteredCities.length > 0 && (
-        <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            right: 0,
-            marginTop: 6,
-            background: "#111827",
-            border: "1px solid #334155",
-            borderRadius: 8,
-            zIndex: 1000,
-            maxHeight: 220,
-            overflowY: "auto",
-            boxShadow: "0 10px 25px rgba(0,0,0,0.35)"
-          }}
-        >
-          {filteredCities.map((city) => (
-            <div
-              key={city}
-              onMouseDown={() => handleSelect(city)}
-              style={{
-                padding: "10px 12px",
-                cursor: "pointer",
-                color: "white",
-                borderBottom: "1px solid #1f2937"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1e293b";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-              }}
-            >
-              {city}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
 
 export default function ShipmentPlanner() {
   const [origin, setOrigin] = useState("");
@@ -109,44 +8,52 @@ export default function ShipmentPlanner() {
   const [priority, setPriority] = useState("Normal");
   const [budget, setBudget] = useState("");
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [nodes, setNodes] = useState([]);
 
-  const planShipment = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-    setResult(null);
+  useEffect(() => {
+    const fetchNodes = async () => {
+      try {
+        const res = await axios.get("http://localhost:3001/api/nodes");
+        const raw = res.data?.nodes || res.data?.data || res.data || [];
+        const list = Array.isArray(raw) ? raw : [];
 
+        const normalized = list
+          .map((node) => {
+            if (typeof node === "string") {
+              return { name: node };
+            }
+
+            return {
+              id: node.id || node._id || node.name,
+              name: node.name || node.city || node.label || ""
+            };
+          })
+          .filter((node) => node.name);
+
+        setNodes(normalized);
+      } catch (err) {
+        console.error("Failed to load nodes:", err);
+      }
+    };
+
+    fetchNodes();
+  }, []);
+
+  const planShipment = async () => {
     try {
-      const res = await axios.post(
-  `${API_URL}/api/shipment-plan`,
-  {
-    origin,
-    destination,
-    weight: Number(weight),
-    priority,
-    budget: Number(budget)
-  }
-);
+      const res = await axios.post("http://localhost:3001/api/shipment-plan", {
+        origin,
+        destination,
+        weight: Number(weight),
+        priority,
+        budget: Number(budget)
+      });
 
       setResult(res.data.data);
     } catch (err) {
       console.error(err);
-      setError(err.response?.data?.error || err.message || "Failed to generate plan");
-    } finally {
-      setLoading(false);
     }
   };
-
-  const riskColor = (score) => {
-    if (typeof score !== "number") return "#94a3b8";
-    if (score >= 70) return "#ef4444";
-    if (score >= 40) return "#f59e0b";
-    return "#22c55e";
-  };
-
-  const showValue = (value) => (value === undefined || value === null || value === "" ? "N/A" : value);
 
   return (
     <div
@@ -159,8 +66,7 @@ export default function ShipmentPlanner() {
     >
       <h2 style={{ color: "#38BDF8" }}>📦 Shipment Planner</h2>
 
-      <form
-        onSubmit={planShipment}
+      <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -168,19 +74,49 @@ export default function ShipmentPlanner() {
           maxWidth: 500
         }}
       >
-        <CityAutocomplete
-          label="Origin"
+        <select
           value={origin}
-          onChange={setOrigin}
-          placeholder="Search origin city..."
-        />
+          onChange={(e) => setOrigin(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "10px 12px",
+            borderRadius: 8,
+            border: "1px solid #334155",
+            background: "#0f172a",
+            color: "white",
+            outline: "none",
+            boxSizing: "border-box"
+          }}
+        >
+          <option value="">Select Origin</option>
+          {nodes.map((node) => (
+            <option key={node.id || node.name} value={node.name}>
+              {node.name}
+            </option>
+          ))}
+        </select>
 
-        <CityAutocomplete
-          label="Destination"
+        <select
           value={destination}
-          onChange={setDestination}
-          placeholder="Search destination city..."
-        />
+          onChange={(e) => setDestination(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "10px 12px",
+            borderRadius: 8,
+            border: "1px solid #334155",
+            background: "#0f172a",
+            color: "white",
+            outline: "none",
+            boxSizing: "border-box"
+          }}
+        >
+          <option value="">Select Destination</option>
+          {nodes.map((node) => (
+            <option key={node.id || node.name} value={node.name}>
+              {node.name}
+            </option>
+          ))}
+        </select>
 
         <input
           placeholder="Weight (kg)"
@@ -234,8 +170,7 @@ export default function ShipmentPlanner() {
         </select>
 
         <button
-          type="submit"
-          disabled={loading}
+          onClick={planShipment}
           style={{
             background: "#38BDF8",
             border: "none",
@@ -243,19 +178,12 @@ export default function ShipmentPlanner() {
             cursor: "pointer",
             borderRadius: 8,
             color: "#03111f",
-            fontWeight: "600",
-            opacity: loading ? 0.7 : 1
+            fontWeight: "600"
           }}
         >
-          {loading ? "Generating..." : "Generate Plan"}
+          Generate Plan
         </button>
-      </form>
-
-      {error && (
-        <div style={{ marginTop: 20, color: "#f87171", fontWeight: "600" }}>
-          {error}
-        </div>
-      )}
+      </div>
 
       {result && (
         <div style={{ marginTop: 30 }}>
@@ -271,70 +199,13 @@ export default function ShipmentPlanner() {
             }}
           >
             <p style={{ margin: "5px 0" }}>
-              <strong>📍 Distance:</strong> {showValue(result.distance)} km
+              <strong>📍 Distance:</strong> {result.distance} km
             </p>
             <p style={{ margin: "5px 0" }}>
-              <strong>🌦️ Origin Climate Risk:</strong>{" "}
-              <span style={{ color: riskColor(result.origin?.climateRisk?.score) }}>
-                {showValue(result.origin?.climateRisk?.level)} (
-                {showValue(result.origin?.climateRisk?.score)})
-              </span>
+              <strong>🌦️ Origin Weather Risk:</strong> {result.origin?.weatherRisk}
             </p>
             <p style={{ margin: "5px 0" }}>
-              <strong>🌦️ Destination Climate Risk:</strong>{" "}
-              <span style={{ color: riskColor(result.destination?.climateRisk?.score) }}>
-                {showValue(result.destination?.climateRisk?.level)} (
-                {showValue(result.destination?.climateRisk?.score)})
-              </span>
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>⚠ Overall Climate Risk:</strong>{" "}
-              <span style={{ color: riskColor(result.climateRisk) }}>
-                {showValue(result.climateRisk)}
-              </span>
-            </p>
-          </div>
-
-          <div
-            style={{
-              background: "#0f172a",
-              padding: 15,
-              marginBottom: 15,
-              borderRadius: 10,
-              border: "1px solid #243244"
-            }}
-          >
-            <h4 style={{ marginTop: 0, color: "#38BDF8" }}>Climate Details</h4>
-
-            <p style={{ margin: "5px 0" }}>
-              <strong>Origin Flood:</strong>{" "}
-              {showValue(result.climateDetails?.origin?.flood?.level)} (
-              {showValue(result.climateDetails?.origin?.flood?.score)})
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>Origin Earthquake:</strong>{" "}
-              {showValue(result.climateDetails?.origin?.earthquake?.level)} (
-              {showValue(result.climateDetails?.origin?.earthquake?.score)})
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>Origin Rain:</strong>{" "}
-              {showValue(result.climateDetails?.origin?.rain?.level)} (
-              {showValue(result.climateDetails?.origin?.rain?.score)})
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>Destination Flood:</strong>{" "}
-              {showValue(result.climateDetails?.destination?.flood?.level)} (
-              {showValue(result.climateDetails?.destination?.flood?.score)})
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>Destination Earthquake:</strong>{" "}
-              {showValue(result.climateDetails?.destination?.earthquake?.level)} (
-              {showValue(result.climateDetails?.destination?.earthquake?.score)})
-            </p>
-            <p style={{ margin: "5px 0" }}>
-              <strong>Destination Rain:</strong>{" "}
-              {showValue(result.climateDetails?.destination?.rain?.level)} (
-              {showValue(result.climateDetails?.destination?.rain?.score)})
+              <strong>🌦️ Destination Weather Risk:</strong> {result.destination?.weatherRisk}
             </p>
           </div>
 
@@ -368,18 +239,24 @@ export default function ShipmentPlanner() {
               </strong>
 
               <div style={{ marginTop: "10px" }}>
-                <div>💰 Cost: ${showValue(o.cost)}</div>
-                <div>⏱ Time: {showValue(o.time)}h</div>
-                <div
-                  style={{
-                    color:
-                      o.risk < 25 ? "#4caf50" : o.risk < 50 ? "#ff9800" : "#f44336",
-                    fontWeight: "bold"
-                  }}
-                >
-                  ⚠ Risk: {showValue(o.risk)}
-                </div>
-              </div>
+  <div>💰 Cost: ${o.cost}</div>
+  <div>⏱ Time: {o.time}h</div>
+  <div
+    style={{
+      color:
+        o.risk < 25 ? "#4caf50" : o.risk < 50 ? "#ff9800" : "#f44336",
+      fontWeight: "bold"
+    }}
+  >
+    ⚠ Risk: {o.risk}
+  </div>
+
+  <div style={{ marginTop: "10px", fontSize: "14px", lineHeight: "1.6" }}>
+  <div>⛽ Fuel Used: {o.fuelLiters} L</div>
+  <div>🌱 CO2 Emissions: {o.co2Kg} kg</div>
+ 
+</div>
+</div>
             </div>
           ))}
 
@@ -396,11 +273,11 @@ export default function ShipmentPlanner() {
             </h4>
 
             <p style={{ fontWeight: "bold", color: "#38BDF8", margin: "5px 0" }}>
-              Recommended Mode: {showValue(result.recommendation?.mode)}
+              Recommended Mode: {result.recommendation?.mode}
             </p>
 
             <p style={{ fontStyle: "italic", margin: "10px 0", lineHeight: "1.5" }}>
-              {showValue(result.recommendation?.reason)}
+              {result.recommendation?.reason}
             </p>
 
             <div
@@ -413,13 +290,13 @@ export default function ShipmentPlanner() {
               }}
             >
               <span style={{ color: "#4caf50" }}>
-                🛡 Safest Risk: {showValue(result.recommendation?.safestOption)}
+                🛡 Safest Risk: {result.recommendation?.safestOption}
               </span>
               <span style={{ color: "#ff9800" }}>
-                💰 Cheapest: ${showValue(result.recommendation?.cheapestOption)}
+                💰 Cheapest: ${result.recommendation?.cheapestOption}
               </span>
               <span style={{ color: "#2196f3" }}>
-                ⚡ Fastest: {showValue(result.recommendation?.fastestOption)}h
+                ⚡ Fastest: {result.recommendation?.fastestOption}h
               </span>
             </div>
           </div>
