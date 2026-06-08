@@ -6,7 +6,8 @@ import Layout from "./components/layout/Layout";
 import Dashboard from "./components/dashboard/Dashboard";
 
 
-
+import HomePage from "./pages/HomePage";
+import GuestHome from "./pages/GuestHome";
 import RoutesPage from "./pages/Routes";
 import Simulate from "./pages/Simulate";
 import Analytics from "./pages/Analytics";
@@ -57,9 +58,10 @@ export default function App() {
 
       <Routes>
        
-
+<Route path="/" element={<HomePage />} />
+<Route path="/guest" element={<GuestHome />} />
         {/* AUTH PAGES */}
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* MAIN APP */}
@@ -91,16 +93,10 @@ export default function App() {
               </ProtectedRoute>
             }
           />
+          
 
           {/* SHIPMENT PLANNER */}
-          <Route
-            path="planner"
-            element={
-              <ProtectedRoute>
-                <ShipmentPlanner />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="planner" element={<ShipmentPlanner />} />
 
           {/* ROUTES */}
           <Route

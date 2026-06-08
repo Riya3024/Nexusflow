@@ -2,14 +2,14 @@ import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
+  const guestMode = localStorage.getItem("guestMode") === "true";
 
-  const user = JSON.parse(
-    localStorage.getItem("user")
-  );
+  const user = guestMode
+    ? null
+    : JSON.parse(localStorage.getItem("user") || "null");
 
   return (
     <div style={{ display: "flex", height: "100vh" }}>
-
       {/* 🔥 SIDEBAR */}
       <Sidebar />
 
@@ -22,9 +22,8 @@ export default function Layout() {
           overflowY: "auto"
         }}
       >
-
         {/* 🔥 USER HEADER */}
-        {user && (
+        {(guestMode || user) && (
           <div
             style={{
               background: "#0D1526",
@@ -43,7 +42,7 @@ export default function Layout() {
                   fontSize: 18
                 }}
               >
-                👤 {user.name}
+                👤 {guestMode ? "Guest User" : user.name}
               </div>
 
               <div
@@ -52,7 +51,7 @@ export default function Layout() {
                   fontSize: 14
                 }}
               >
-                {user.email}
+                {guestMode ? "Limited demo access" : user.email}
               </div>
             </div>
 
@@ -62,16 +61,14 @@ export default function Layout() {
                 fontSize: 14
               }}
             >
-              User ID: {user.id}
+              {guestMode ? "Guest ID: DEMO" : `User ID: ${user.id}`}
             </div>
           </div>
         )}
 
         {/* 🔥 THIS IS IMPORTANT (ROUTING RENDERS HERE) */}
         <Outlet />
-
       </div>
-
     </div>
   );
 }

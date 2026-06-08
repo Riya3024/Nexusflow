@@ -29,6 +29,7 @@ export default function Login() {
 );
 
       localStorage.setItem("token", res.data.token);
+localStorage.removeItem("guestMode");
 
 localStorage.setItem(
   "user",
