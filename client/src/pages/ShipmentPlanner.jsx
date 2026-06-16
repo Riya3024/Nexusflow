@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function ShipmentPlanner() {
   const [origin, setOrigin] = useState("");
@@ -15,7 +16,7 @@ export default function ShipmentPlanner() {
   useEffect(() => {
     const fetchNodes = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/api/nodes");
+        const res = await axios.get(`${API_URL}/api/nodes`);
         const raw = res.data?.nodes || res.data?.data || res.data || [];
         const list = Array.isArray(raw) ? raw : [];
 
@@ -43,13 +44,13 @@ export default function ShipmentPlanner() {
 
   const planShipment = async () => {
     try {
-      const res = await axios.post("http://localhost:3001/api/shipment-plan", {
-        origin,
-        destination,
-        weight: Number(weight),
-        priority,
-        budget: Number(budget)
-      });
+      const res = await axios.post(`${API_URL}/api/shipment-plan`, {
+  origin,
+  destination,
+  weight: Number(weight),
+  priority,
+  budget: Number(budget)
+});
 
       setResult(res.data.data);
     } catch (err) {
@@ -63,23 +64,14 @@ export default function ShipmentPlanner() {
 
     const selectedMode = result.recommendation?.mode;
 
-    const res = await axios.post(
-      "http://localhost:3001/api/shipments",
-      {
-        origin,
-        destination,
-        path: result.path,
-        mode: selectedMode,
-
-        // backend will calculate this now
-        risk: 0,
-
-        eta:
-          result.recommendation?.eta ||
-          result.eta ||
-          ""
-      }
-    );
+    const res = await axios.post(`${API_URL}/api/shipments`, {
+  origin,
+  destination,
+  path: result.path,
+  mode: selectedMode,
+  risk: 0,
+  eta: result.recommendation?.eta || result.eta || ""
+});
 
 
     navigate(`/tracking/${res.data.id}`, {
