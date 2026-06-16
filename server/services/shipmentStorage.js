@@ -21,7 +21,7 @@ async function initTable() {
       rerouted TINYINT(1) DEFAULT 0,
       delayProbability INT DEFAULT 0,
       healthScore INT DEFAULT 0,
-      rerouteSuggestion JSON
+      rerouteSuggestion JSON NULL
     )
   `);
 }
