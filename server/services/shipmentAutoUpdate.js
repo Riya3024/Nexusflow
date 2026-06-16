@@ -92,12 +92,12 @@ async function startShipmentAutoUpdate() {
         }
 
         const rerouteSuggestion =
-          (s.risk || 0) >= 80
-            ? getBackupRoute(s, shipments)
-            : s.rerouteSuggestion || {
-                shouldReroute: false,
-                message: "Risk is within acceptable range."
-              };
+  (s.risk || 0) >= 80
+    ? await getBackupRoute(s, shipments)
+    : s.rerouteSuggestion || {
+        shouldReroute: false,
+        message: "Risk is within acceptable range."
+      };
 
         if (
           rerouteSuggestion.shouldReroute &&

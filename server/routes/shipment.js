@@ -45,33 +45,57 @@ async function patchShipment(req, res) {
 router.post("/", async (req, res) => {
   try {
     const shipment = {
-      id: "SHP" + Date.now(),
-      origin: req.body.origin,
-      destination: req.body.destination,
-      mode: req.body.mode || "Sea",
-      risk: Number(req.body.risk || 0),
-      path: req.body.path || [
-        req.body.origin,
-        "Dubai Hub",
-        "Singapore Hub",
-        req.body.destination
-      ],
-      currentStep: 0,
-      progress: 0,
-      status: "Booked",
-      plannedEta: req.body.eta || "18h",
-      predictedEta: req.body.eta || "21h",
-      createdAt: Date.now(),
-      events: [
-        {
-          title: "Shipment Created",
-          time: new Date().toISOString(),
-          detail: "Created from planner"
-        }
-      ],
-      alerts: [],
-      recommendedRoute: []
-    };
+
+ id:"SHP"+Date.now(),
+
+ origin:req.body.origin,
+
+ destination:req.body.destination,
+
+ mode:req.body.mode || "Sea",
+
+ risk:Number(req.body.risk || 0),
+
+ path:req.body.path || [
+   req.body.origin,
+   "Dubai Hub",
+   "Singapore Hub",
+   req.body.destination
+ ],
+
+ currentStep:0,
+
+ progress:0,
+
+ status:"Booked",
+
+ plannedEta:req.body.eta || "18h",
+
+ predictedEta:req.body.eta || "21h",
+
+ createdAt:Date.now(),
+
+ events:[
+  {
+   title:"Shipment Created",
+   time:new Date().toISOString(),
+   detail:"Created from planner"
+  }
+ ],
+
+ alerts:[],
+
+ recommendedRoute:[],
+
+ rerouted:false,
+
+ rerouteSuggestion:{
+   shouldReroute:false,
+   message:""
+ }
+
+};
+     
 
     const created = await createShipment(shipment);
     res.status(201).json(created);
