@@ -18,7 +18,10 @@ async function initTable() {
       events JSON,
       alerts JSON,
       recommendedRoute JSON,
-      rerouted TINYINT(1) DEFAULT 0
+      rerouted TINYINT(1) DEFAULT 0,
+      delayProbability INT DEFAULT 0,
+      healthScore INT DEFAULT 0,
+      rerouteSuggestion JSON
     )
   `);
 }
@@ -45,7 +48,8 @@ async function getShipments() {
     path: safeJson(row.path),
     events: safeJson(row.events),
     alerts: safeJson(row.alerts),
-    recommendedRoute: safeJson(row.recommendedRoute)
+    recommendedRoute: safeJson(row.recommendedRoute),
+    rerouteSuggestion: safeJson(row.rerouteSuggestion, null)
   }));
 }
 
@@ -60,7 +64,8 @@ async function getShipmentById(id) {
     path: safeJson(row.path),
     events: safeJson(row.events),
     alerts: safeJson(row.alerts),
-    recommendedRoute: safeJson(row.recommendedRoute)
+    recommendedRoute: safeJson(row.recommendedRoute),
+    rerouteSuggestion: safeJson(row.rerouteSuggestion, null)
   };
 }
 
@@ -83,13 +88,16 @@ async function createShipment(shipment) {
     events: JSON.stringify(shipment.events || []),
     alerts: JSON.stringify(shipment.alerts || []),
     recommendedRoute: JSON.stringify(shipment.recommendedRoute || []),
-    rerouted: shipment.rerouted ? 1 : 0
+    rerouted: shipment.rerouted ? 1 : 0,
+    delayProbability: Number(shipment.delayProbability || 0),
+    healthScore: Number(shipment.healthScore || 0),
+    rerouteSuggestion: shipment.rerouteSuggestion ? JSON.stringify(shipment.rerouteSuggestion) : null
   };
 
   await pool.execute(
     `INSERT INTO shipments
-    (id, origin, destination, mode, risk, path, currentStep, progress, status, plannedEta, predictedEta, createdAt, events, alerts, recommendedRoute, rerouted)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    (id, origin, destination, mode, risk, path, currentStep, progress, status, plannedEta, predictedEta, createdAt, events, alerts, recommendedRoute, rerouted, delayProbability, healthScore, rerouteSuggestion)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       data.id,
       data.origin,
@@ -106,7 +114,10 @@ async function createShipment(shipment) {
       data.events,
       data.alerts,
       data.recommendedRoute,
-      data.rerouted
+      data.rerouted,
+      data.delayProbability,
+      data.healthScore,
+      data.rerouteSuggestion
     ]
   );
 
@@ -136,7 +147,10 @@ async function updateShipment(id, updates) {
       events = ?,
       alerts = ?,
       recommendedRoute = ?,
-      rerouted = ?
+      rerouted = ?,
+      delayProbability = ?,
+      healthScore = ?,
+      rerouteSuggestion = ?
     WHERE id = ?`,
     [
       merged.origin,
@@ -154,6 +168,9 @@ async function updateShipment(id, updates) {
       JSON.stringify(merged.alerts || []),
       JSON.stringify(merged.recommendedRoute || []),
       merged.rerouted ? 1 : 0,
+      Number(merged.delayProbability || 0),
+      Number(merged.healthScore || 0),
+      merged.rerouteSuggestion ? JSON.stringify(merged.rerouteSuggestion) : null,
       id
     ]
   );

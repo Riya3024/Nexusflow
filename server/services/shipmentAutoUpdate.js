@@ -1,4 +1,8 @@
-const { getShipments, updateShipment } = require("./shipmentStorage");
+const {
+  getShipments,
+  updateShipment
+} = require("./shipmentStorage");
+
 const { getBackupRoute } = require("./rerouteService");
 
 async function startShipmentAutoUpdate() {
@@ -28,28 +32,62 @@ async function startShipmentAutoUpdate() {
             ? "In Transit"
             : "Booked";
 
-        const predictedEta = `${18 + Math.round((s.risk || 0) / 10) + Math.round(progress / 20)}h`;
+        const delayProbability = Math.min(
+          95,
+          Math.round((s.risk || 0) * 0.8 + progress * 0.2)
+        );
 
-        const alerts = [...(s.alerts || [])];
+        const healthScore = Math.max(
+          0,
+          100 - (s.risk || 0) - progress / 2
+        );
 
-        if (progress > 25 && !alerts.some((a) => a.type === "TRANSIT")) {
+        const predictedEta =
+          `${18 + Math.round((s.risk || 0) / 10) + Math.round(progress / 20)}h`;
+
+        const alerts = [
+          ...(s.alerts || [])
+        ];
+
+        if (
+          progress > 25 &&
+          !alerts.some(
+            (a) =>
+              a.type === "TRANSIT"
+          )
+        ) {
           alerts.push({
             type: "TRANSIT",
-            message: "Shipment entered transit zone"
+            message:
+              "Shipment entered transit zone"
           });
         }
 
-        if (progress > 75 && !alerts.some((a) => a.type === "ETA")) {
+        if (
+          progress > 75 &&
+          !alerts.some(
+            (a) =>
+              a.type === "ETA"
+          )
+        ) {
           alerts.push({
             type: "ETA",
-            message: "Shipment approaching destination"
+            message:
+              "Shipment approaching destination"
           });
         }
 
-        if ((s.risk || 0) > 60 && !alerts.some((a) => a.type === "RISK")) {
+        if (
+          (s.risk || 0) > 60 &&
+          !alerts.some(
+            (a) =>
+              a.type === "RISK"
+          )
+        ) {
           alerts.push({
             type: "RISK",
-            message: `Risk increased to ${s.risk}`
+            message:
+              `Risk increased to ${s.risk}`
           });
         }
 
@@ -61,27 +99,48 @@ async function startShipmentAutoUpdate() {
                 message: "Risk is within acceptable range."
               };
 
-        if (rerouteSuggestion.shouldReroute && !alerts.some((a) => a.type === "REROUTE")) {
+        if (
+          rerouteSuggestion.shouldReroute &&
+          !alerts.some(
+            (a) =>
+              a.type === "REROUTE"
+          )
+        ) {
           alerts.push({
             type: "REROUTE",
-            message: rerouteSuggestion.message
+            message:
+              rerouteSuggestion.message
           });
         }
 
         const event = {
           title: `Moved to ${s.path[nextStep]}`,
-          time: new Date().toISOString(),
-          detail: `Shipment reached step ${nextStep + 1} of ${s.path.length}`
+          time:
+            new Date().toISOString(),
+          detail:
+            `Shipment reached step ${
+              nextStep + 1
+            } of ${s.path.length}`
         };
 
-        await updateShipment(s.id, {
-          currentStep: nextStep,
-          progress,
-          status,
-          predictedEta,
-          alerts,
-          events: [...(s.events || []), event]
-        });
+        await updateShipment(
+          s.id,
+          {
+            currentStep:
+              nextStep,
+            progress,
+            status,
+            delayProbability,
+            healthScore,
+            predictedEta,
+            rerouteSuggestion,
+            alerts,
+            events: [
+              ...(s.events || []),
+              event
+            ]
+          }
+        );
       }
     } catch (err) {
       console.error("Auto update error:", err);
