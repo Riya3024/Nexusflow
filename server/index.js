@@ -1,6 +1,7 @@
 const path = require("path");
 require("dotenv").config();
 console.log("1. index.js loaded");
+
 const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
 
@@ -15,11 +16,9 @@ process.on("unhandledRejection", (err) => {
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+
 const ENABLE_DATA_COLLECTION = process.env.DATA_COLLECTION === "true";
-console.log(
-  "GEMINI_API_KEY loaded:",
-  !!process.env.GEMINI_API_KEY
-);
+console.log("GEMINI_API_KEY loaded:", !!process.env.GEMINI_API_KEY);
 
 const { generateNodes, generateRoutes } = require("./data/syntheticData");
 const { computeNodeRisk } = require("./services/riskEngine");
@@ -29,27 +28,12 @@ const { getBatchMLRisk } = require("./services/mlService");
 const { getShipDensity } = require("./services/shipService");
 const { getTrafficCongestion } = require("./services/trafficService");
 const { getDelayIndex } = require("./services/delayService");
-const { getMLRisk } = require("./services/mlService");
-const { callGemini } = require("./services/geminiService");
+const { callGemini, getRouteAlternatives, getCascadeAnalysis, askGemini } = require("./services/geminiService");
 const { detectAnomaly } = require("./services/anomalyEngine");
-
-
-
-
-
-
-
-
 const { buildGraph, dijkstra } = require("./services/graphEngine");
-const {
-  getRouteAlternatives,
-  getCascadeAnalysis,
-  askGemini
-} = require("./services/geminiService");
-
+const { startShipmentAutoUpdate } = require("./services/shipmentAutoUpdate");
 
 console.log("2. imports completed");
-
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -61,64 +45,42 @@ const authRoutes = require("./routes/auth");
 const shipmentRoutes = require("./routes/shipment");
 
 
-app.use(cors());
-app.use(express.json());
+startShipmentAutoUpdate();
+const apiRoutes = require("./routes/api");
 
 app.use("/api/auth", authRoutes);
-app.use("/api/shipment", shipmentRoutes);
-
-
-console.log("🚀 SERVER STARTED");
-
-
+app.use("/api/shipments", shipmentRoutes);
 
 // ================= INITIAL DATA =================
 
 let nodes = generateNodes(15);
 const routes = generateRoutes(nodes);
 
-
-
-// initial risk
-nodes = nodes.map(n => computeNodeRisk(n));
+nodes = nodes.map((n) => computeNodeRisk(n));
 
 let alerts = [];
-const apiRoutes = require("./routes/api");
 app.use("/api", apiRoutes({ nodes, routes, alerts }));
 
 // ================= 📊 DATA COLLECTION =================
 
 function collectData(node) {
-
   const record = {
     timestamp: Date.now(),
     nodeId: node.id,
-
     weather: node.riskFactors.weatherSeverity || 0,
     traffic: node.riskFactors.traffic || 0,
     ships: node.riskFactors.shipDensity || 0,
-
-    // ✅ FIXED (add delay)
     delay: node.riskFactors.delayRate || 0,
-
-    // 🎯 ML target
-    actualDelay:
-      (node.riskFactors.delayRate || 0) +
-      (Math.random() * 10 - 5)
+    actualDelay: (node.riskFactors.delayRate || 0) + (Math.random() * 10 - 5)
   };
 
-  fs.appendFileSync(
-    "./dataset.json",
-    JSON.stringify(record) + "\n"
-  );
+  fs.appendFileSync("./dataset.json", JSON.stringify(record) + "\n");
 }
 
 // ================= API =================
 
-// 📊 NODES (with ML prediction)
 app.get("/api/nodes", async (req, res) => {
   try {
-
     const predictions = await getBatchMLRisk(nodes);
 
     nodes.forEach((n, i) => {
@@ -126,21 +88,16 @@ app.get("/api/nodes", async (req, res) => {
     });
 
     res.json({ success: true, data: nodes });
-
   } catch (err) {
     console.error("NODE ERROR:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-      
-
-// 🔗 ROUTES
 app.get("/api/routes", (req, res) => {
   res.json({ success: true, data: routes });
 });
 
-// 🚨 ALERTS
 app.get("/api/alerts", (req, res) => {
   res.json({ success: true, data: alerts });
 });
@@ -148,13 +105,9 @@ app.get("/api/alerts", (req, res) => {
 app.post("/api/optimize", async (req, res) => {
   try {
     const { routeId } = req.body;
-
-    const route = routes.find(r => r.id === routeId);
-
+    const route = routes.find((r) => r.id === routeId);
     const result = await getRouteAlternatives(route, nodes);
-
     res.json({ success: true, data: result });
-
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -163,14 +116,12 @@ app.post("/api/optimize", async (req, res) => {
 app.post("/api/simulate", async (req, res) => {
   try {
     const { nodeId } = req.body;
-
-    const node = nodes.find(n => n.id === nodeId);
+    const node = nodes.find((n) => n.id === nodeId);
 
     if (!node) {
       return res.status(404).json({ error: "Node not found" });
     }
 
-    // 🧠 Prompt
     const prompt = `
 A port named ${node.name} is disrupted.
 
@@ -187,10 +138,8 @@ Keep answer short.
       success: true,
       data: result
     });
-
   } catch (err) {
     console.error("SIMULATION ERROR:", err);
-
     res.json({
       success: false,
       data: "Simulation failed"
@@ -198,26 +147,20 @@ Keep answer short.
   }
 });
 
-
 app.post("/api/cascade", async (req, res) => {
   try {
     const { node } = req.body;
-
     const result = await getCascadeAnalysis(node, nodes);
 
     res.json({
       success: true,
       data: result
     });
-
   } catch (err) {
     console.error("CASCADE ERROR:", err);
     res.status(500).json({ error: "Cascade failed" });
   }
 });
-
-
-
 
 app.post("/api/query", async (req, res) => {
   try {
@@ -225,40 +168,33 @@ app.post("/api/query", async (req, res) => {
 
     const systemState = {
       totalNodes: nodes.length,
-      riskyNodes: nodes.filter(n => n.riskScore > 60).length
+      riskyNodes: nodes.filter((n) => n.riskScore > 60).length
     };
 
     const answer = await askGemini(question, systemState);
 
     res.json({ success: true, data: answer });
-
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// 🤖 AI ANALYSIS
 app.post("/api/ai/analyze", async (req, res) => {
   try {
-    // 🔴 High-risk nodes
     const riskyNodes = nodes
-      .filter(n => n.riskScore > 60)
-      .map(n => n.id);
+      .filter((n) => n.riskScore > 60)
+      .map((n) => n.id);
 
-    // 🟢 Best route (rule-based)
     const optimized = optimizeRoutes(routes, nodes);
     const bestRoute = optimized[0];
 
-    // 🤖 ML Predictions (batch)
     const predictions = await getBatchMLRisk(nodes);
 
-    // attach predictions to nodes
     const predictionData = nodes.map((n, i) => ({
       id: n.id,
       predictedRisk: predictions[i]
     }));
 
-    // update node risk (optional)
     nodes.forEach((n, i) => {
       n.riskScore = predictions[i];
     });
@@ -271,16 +207,15 @@ app.post("/api/ai/analyze", async (req, res) => {
         predictions: predictionData
       }
     });
-
   } catch (err) {
     console.error("AI ERROR:", err);
     res.status(500).json({ error: err.message });
   }
 });
+
 app.post("/api/decision", (req, res) => {
   try {
     const { selectedRoute, aiRoute, accepted } = req.body;
-
     const { addAudit } = require("./data/auditStore");
 
     addAudit({
@@ -292,7 +227,6 @@ app.post("/api/decision", (req, res) => {
     });
 
     res.json({ success: true });
-
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -300,78 +234,50 @@ app.post("/api/decision", (req, res) => {
 
 app.get("/api/metrics/ai-accept", (req, res) => {
   const { getAudit } = require("./data/auditStore");
-
   const logs = getAudit();
+  const decisions = logs.filter((l) => l.type === "ROUTE_DECISION");
+  const accepted = decisions.filter((d) => d.accepted).length;
 
-  const decisions = logs.filter(l => l.type === "ROUTE_DECISION");
-
-  const accepted = decisions.filter(d => d.accepted).length;
-
-  const percent =
-    decisions.length === 0
-      ? 0
-      : (accepted / decisions.length) * 100;
+  const percent = decisions.length === 0 ? 0 : (accepted / decisions.length) * 100;
 
   res.json({
     success: true,
     data: Number(percent.toFixed(1))
   });
 });
-    
-    
 
-
-
-
-// 🔥 DIJKSTRA ROUTE
-// 🔥 DIJKSTRA ROUTE
 app.post("/api/route/find", async (req, res) => {
   try {
     const { start, end } = req.body;
-
     const graph = buildGraph(nodes, routes);
 
-    // =========================
-    // 1️⃣ DIJKSTRA (BASE ROUTE)
-    // =========================
-    const path = dijkstra(graph, start, end);
+    const pathResult = dijkstra(graph, start, end);
 
-    const totalRisk = path.reduce((sum, id) => {
-      const node = nodes.find(n => n.id === id);
+    const totalRisk = pathResult.reduce((sum, id) => {
+      const node = nodes.find((n) => n.id === id);
       return sum + (node?.riskScore || 0);
     }, 0);
 
-    const avgRisk = totalRisk / path.length;
+    const avgRisk = pathResult.length ? totalRisk / pathResult.length : 0;
 
     const bestRoute = {
-      path,
+      path: pathResult,
       avgRisk,
       totalRisk
     };
 
-    // =========================
-    // 2️⃣ GEMINI (AI ALTERNATIVES)
-    // =========================
     const aiRoutesRaw = await getRouteAlternatives(bestRoute, nodes);
-
-    // ✅ SAFETY: ensure it's always array
     const aiRoutes = Array.isArray(aiRoutesRaw) ? aiRoutesRaw : [];
 
-    // =========================
-    // 3️⃣ FINAL RESPONSE (CLEAN)
-    // =========================
     res.json({
       success: true,
       data: {
-        // 🔹 Algorithm output
         dijkstra: {
           label: "Safest Route (System)",
-          path,
+          path: pathResult,
           avgRisk: Number(avgRisk.toFixed(2)),
           totalRisk: Number(totalRisk.toFixed(2))
         },
-
-        // 🔹 AI output
         aiAlternatives: aiRoutes.map((r, i) => ({
           rank: r.rank || i + 1,
           path: r.path || [],
@@ -380,33 +286,23 @@ app.post("/api/route/find", async (req, res) => {
         }))
       }
     });
-
   } catch (err) {
     console.error("ROUTE ERROR:", err);
     res.status(500).json({ error: err.message });
   }
 });
+
 // ================= SIMULATION LOOP =================
 
 setInterval(async () => {
   try {
-
     for (let n of nodes) {
-
-      // 🌦 WEATHER
       const weatherRisk = await getWeatherRisk(n.lat, n.lng);
       n.riskFactors.weatherSeverity = weatherRisk;
-
-      // 🚢 SHIPS
       n.riskFactors.shipDensity = getShipDensity(n);
-
-      // 🌍 TRAFFIC
       n.riskFactors.traffic = getTrafficCongestion(n);
-
-      // ⏱ DELAY
       n.riskFactors.delayRate = getDelayIndex(n);
 
-      // 🔥 COMPUTE BASE RISK
       const updated = computeNodeRisk(n);
 
       updated.history = updated.history || [];
@@ -437,7 +333,6 @@ setInterval(async () => {
         console.log("🚨 ALERT:", alert);
 
         const { addAudit } = require("./data/auditStore");
-
         addAudit({
           type: "ANOMALY",
           node: n.name,
@@ -449,28 +344,24 @@ setInterval(async () => {
         collectData(n);
       }
     }
-
   } catch (err) {
     console.error("INTERVAL ERROR:", err);
   }
 }, 30000);
 
-   
+// ================= REACT BUILD =================
 
-   
-
-  
-  // Serve React build
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "../client/dist/index.html")
-  );
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
+
+// Start shipment auto-update at the end
 
 
 console.log("3. before app.listen");
+
 // ================= START =================
 
 app.listen(PORT, () => {

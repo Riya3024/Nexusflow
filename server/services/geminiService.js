@@ -187,24 +187,29 @@ Answer clearly and briefly.
 // ==========================
 function safeJsonParse(text) {
   try {
-    if (!text || typeof text !== "string") return null;
+    if (!text) return null;
 
-    const cleaned = text
-      .replace(/```json/g, "")
-      .replace(/```/g, "")
-      .trim();
+    // Find first JSON object
+    const start = text.indexOf("{");
+    const end = text.lastIndexOf("}");
 
-    const parsed = JSON.parse(cleaned);
+    if (start === -1 || end === -1) {
+      return null;
+    }
 
-    return parsed;
+    const jsonString = text.substring(start, end + 1);
+
+    return JSON.parse(jsonString);
 
   } catch (err) {
-    console.error("❌ JSON PARSE ERROR:", text);
-
-    // 🔥 IMPORTANT: return EMPTY ARRAY for routes
-    return [];
+    console.error("❌ JSON PARSE ERROR:", err);
+    return null;
   }
 }
+
+   
+
+    
     
 // ==========================
 // 🔥 FALLBACK ENGINE

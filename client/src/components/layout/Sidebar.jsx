@@ -98,6 +98,9 @@ export default function Sidebar() {
           >
             📦 Shipment Planner
           </Link>
+          <Link to="/tracking" style={linkStyle}>
+  🚚 Create Shipment
+</Link>
 
           <Link
             to="/dashboard/routes"

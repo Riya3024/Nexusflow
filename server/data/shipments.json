@@ -1,0 +1,1097 @@
+[
+  {
+    "origin": "Santos",
+    "destination": "Jeddah",
+    "mode": "Sea",
+    "risk": 40,
+    "eta": ""
+  },
+  {
+    "id": "SHP1781544569662",
+    "origin": "Vancouver",
+    "destination": "Shanghai",
+    "mode": "Sea",
+    "risk": 76,
+    "path": [
+      "Vancouver",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Shanghai"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "31h",
+    "createdAt": 1781544569662,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-15T17:29:29.662Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T17:29:30.558Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T17:29:35.558Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Shanghai",
+        "time": "2026-06-15T17:29:40.559Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "RISK",
+        "message": "Risk increased to 76"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [],
+    "delayProbability": 81,
+    "healthScore": 0,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    }
+  },
+  {
+    "id": "SHP1781544725490",
+    "origin": "Santos",
+    "destination": "Vancouver",
+    "mode": "Sea",
+    "risk": 58,
+    "path": [
+      "Santos",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Vancouver"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "29h",
+    "createdAt": 1781544725490,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-15T17:32:05.490Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T17:32:05.860Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T17:32:10.875Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Vancouver",
+        "time": "2026-06-15T17:32:15.897Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-15T17:32:44.022Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T17:32:45.931Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T17:32:50.953Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Vancouver",
+        "time": "2026-06-15T17:32:55.966Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "Santos",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Vancouver"
+    ],
+    "delayProbability": 66,
+    "healthScore": 0,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781546608778",
+    "origin": "Melbourne",
+    "destination": "Hamburg",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Melbourne",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Hamburg"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781546608778,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-15T18:03:28.778Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T18:03:31.382Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T18:03:36.397Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Hamburg",
+        "time": "2026-06-15T18:03:41.410Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    }
+  },
+  {
+    "id": "SHP1781546859556",
+    "origin": "New York",
+    "destination": "New York",
+    "mode": "Air",
+    "risk": 0,
+    "path": [
+      "New York",
+      "Dubai Hub",
+      "Singapore Hub",
+      "New York"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781546859557,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-15T18:07:39.557Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T18:07:41.735Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T18:07:46.735Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to New York",
+        "time": "2026-06-15T18:07:51.749Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-15T18:11:56.910Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T18:11:57.109Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T18:12:12.110Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to New York",
+        "time": "2026-06-15T18:12:17.114Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "New York",
+      "Dubai Hub",
+      "Singapore Hub",
+      "New York"
+    ],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781548797394",
+    "origin": "Jeddah",
+    "destination": "New York",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Jeddah",
+      "Dubai Hub",
+      "Singapore Hub",
+      "New York"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781548797394,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-15T18:39:57.394Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-15T18:39:58.987Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-15T18:40:03.999Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to New York",
+        "time": "2026-06-15T18:40:09.000Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    }
+  },
+  {
+    "id": "SHP1781588392299",
+    "origin": "Antwerp",
+    "destination": "Sydney",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Antwerp",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Sydney"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781588392299,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T05:39:52.299Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:39:54.239Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:39:59.241Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Sydney",
+        "time": "2026-06-16T05:40:04.255Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:40:45.534Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:40:48.789Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:40:49.017Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:40:49.325Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:40:51.009Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:40:51.224Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:40:54.327Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:40:59.330Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Sydney",
+        "time": "2026-06-16T05:41:04.344Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:41:51.992Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:41:52.118Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:41:52.348Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:41:54.402Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:41:56.946Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:41:59.411Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:42:00.278Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:42:04.431Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:42:09.440Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Sydney",
+        "time": "2026-06-16T05:42:14.442Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "Antwerp",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Sydney"
+    ],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781588640034",
+    "origin": "Vancouver",
+    "destination": "Jeddah",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Vancouver",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Jeddah"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781588640034,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T05:44:00.034Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:44:04.643Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:44:09.659Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Jeddah",
+        "time": "2026-06-16T05:44:14.663Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:46:52.527Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:46:53.989Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:46:54.205Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:46:54.382Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:46:54.604Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:46:54.934Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:46:59.940Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Jeddah",
+        "time": "2026-06-16T05:47:04.945Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:49:06.245Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:49:06.467Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:49:10.131Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:49:15.139Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Jeddah",
+        "time": "2026-06-16T05:49:20.145Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T05:50:38.789Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T05:50:40.239Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T05:50:45.245Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Jeddah",
+        "time": "2026-06-16T05:50:50.253Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "Vancouver",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Jeddah"
+    ],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781589991127",
+    "origin": "Antwerp",
+    "destination": "Dubai",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Antwerp",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Dubai"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781589991127,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T06:06:31.127Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:06:31.747Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:06:36.748Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:06:39.587Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:06:39.775Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:06:39.968Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:06:40.187Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:06:41.762Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:06:46.764Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Dubai",
+        "time": "2026-06-16T06:06:51.767Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:09:19.681Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:09:19.887Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:09:20.794Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:09:21.009Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:09:22.044Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:09:27.052Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Dubai",
+        "time": "2026-06-16T06:09:32.055Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "Antwerp",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Dubai"
+    ],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781590261336",
+    "origin": "New York",
+    "destination": "Tokyo",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "New York",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Tokyo"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781590261336,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T06:11:01.336Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:11:04.125Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:11:06.596Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:11:07.685Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:11:07.871Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:11:08.064Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:11:08.290Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:11:09.141Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:11:14.140Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Tokyo",
+        "time": "2026-06-16T06:11:19.154Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:10.642Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:10.856Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:19:14.430Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:19:19.445Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Tokyo",
+        "time": "2026-06-16T06:19:24.455Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:25.967Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:26.175Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:26.387Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:27.092Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:27.279Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:27.449Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:27.686Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:19:29.455Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:19:34.570Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Tokyo",
+        "time": "2026-06-16T06:19:39.577Z",
+        "detail": "Shipment reached step 4 of 4"
+      },
+      {
+        "title": "AI Re-route Generated",
+        "time": "2026-06-16T06:19:42.538Z",
+        "detail": "Alternative route recommended"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T06:19:44.587Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T06:19:49.595Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Tokyo",
+        "time": "2026-06-16T06:19:54.605Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [
+      "New York",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Tokyo"
+    ],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    },
+    "rerouted": true
+  },
+  {
+    "id": "SHP1781594004053",
+    "origin": "Hong Kong",
+    "destination": "Dubai",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "Hong Kong",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Dubai"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781594004053,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T07:13:24.053Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T07:13:26.895Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T07:13:31.910Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Dubai",
+        "time": "2026-06-16T07:13:36.921Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    }
+  },
+  {
+    "id": "SHP1781599631605",
+    "origin": "New York",
+    "destination": "Mumbai",
+    "mode": "Sea",
+    "risk": 0,
+    "path": [
+      "New York",
+      "Dubai Hub",
+      "Singapore Hub",
+      "Mumbai"
+    ],
+    "currentStep": 3,
+    "progress": 100,
+    "status": "Delivered",
+    "plannedEta": "18h",
+    "predictedEta": "23h",
+    "createdAt": 1781599631605,
+    "events": [
+      {
+        "title": "Shipment Created",
+        "time": "2026-06-16T08:47:11.605Z",
+        "detail": "Created from planner"
+      },
+      {
+        "title": "Moved to Dubai Hub",
+        "time": "2026-06-16T08:47:15.283Z",
+        "detail": "Shipment reached step 2 of 4"
+      },
+      {
+        "title": "Moved to Singapore Hub",
+        "time": "2026-06-16T08:47:20.291Z",
+        "detail": "Shipment reached step 3 of 4"
+      },
+      {
+        "title": "Moved to Mumbai",
+        "time": "2026-06-16T08:47:25.305Z",
+        "detail": "Shipment reached step 4 of 4"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "TRANSIT",
+        "message": "Shipment entered transit zone"
+      },
+      {
+        "type": "ETA",
+        "message": "Shipment approaching destination"
+      }
+    ],
+    "recommendedRoute": [],
+    "delayProbability": 20,
+    "healthScore": 50,
+    "rerouteSuggestion": {
+      "shouldReroute": false,
+      "message": "Risk is within acceptable range."
+    }
+  }
+]

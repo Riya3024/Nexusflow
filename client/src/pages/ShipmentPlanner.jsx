@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function ShipmentPlanner() {
@@ -9,6 +10,7 @@ export default function ShipmentPlanner() {
   const [budget, setBudget] = useState("");
   const [result, setResult] = useState(null);
   const [nodes, setNodes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNodes = async () => {
@@ -54,6 +56,50 @@ export default function ShipmentPlanner() {
       console.error(err);
     }
   };
+
+
+  const createShipment = async () => {
+  try {
+
+    const selectedMode = result.recommendation?.mode;
+
+    const res = await axios.post(
+      "http://localhost:3001/api/shipments",
+      {
+        origin,
+        destination,
+        path: result.path,
+        mode: selectedMode,
+
+        // backend will calculate this now
+        risk: 0,
+
+        eta:
+          result.recommendation?.eta ||
+          result.eta ||
+          ""
+      }
+    );
+
+
+    navigate(`/tracking/${res.data.id}`, {
+      state: {
+        fromPlanner:true,
+        plannedData:res.data
+      }
+    });
+
+
+  } catch(err){
+    console.error(
+      "Create shipment error:",
+      err
+    );
+  }
+};
+      
+
+      
 
   return (
     <div
@@ -271,6 +317,24 @@ export default function ShipmentPlanner() {
             <h4 style={{ color: "#4caf50", margin: "0 0 10px 0" }}>
               🤖 AI Recommendation
             </h4>
+
+            <button
+  onClick={createShipment}
+  style={{
+    marginTop: 15,
+    background: "#22C55E",
+    border: "none",
+    padding: 12,
+    borderRadius: 8,
+    cursor: "pointer",
+    color: "white",
+    fontWeight: "bold"
+  }}
+>
+  Create Shipment
+</button>
+     
+
 
             <p style={{ fontWeight: "bold", color: "#38BDF8", margin: "5px 0" }}>
               Recommended Mode: {result.recommendation?.mode}

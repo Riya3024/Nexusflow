@@ -21,6 +21,8 @@ import Register from "./pages/Register";
 
 import ProtectedRoute from "./components/navi/ProtectedRoute";
 
+import ShipmentTracking from "./pages/ShipmentTracking";
+
 export default function App() {
   const [nodes, setNodes] = useState([]);
   const [routes, setRoutes] = useState([]);
@@ -60,12 +62,16 @@ export default function App() {
        
 <Route path="/" element={<HomePage />} />
 <Route path="/guest" element={<GuestHome />} />
+<Route path="/tracking" element={<ShipmentTracking />} />
+<Route path="tracking/:id" element={<ShipmentTracking />} />
         {/* AUTH PAGES */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* MAIN APP */}
         <Route path="/dashboard" element={<Layout />}>
+
+      
 
           {/* DASHBOARD */}
           <Route
@@ -97,6 +103,8 @@ export default function App() {
 
           {/* SHIPMENT PLANNER */}
           <Route path="planner" element={<ShipmentPlanner />} />
+
+          
 
           {/* ROUTES */}
           <Route

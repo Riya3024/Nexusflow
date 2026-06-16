@@ -86,18 +86,12 @@ function FlowAnimation({ routes, nodes }) {
 }
 
 
-function MovingShipment({ routeData, nodes }) {
-  const [position, setPosition] = useState(0);
-
-  useEffect(() => {
-    if (!routeData?.dijkstra?.path) return;
-
-    const interval = setInterval(() => {
-      setPosition(prev => prev + 0.01);
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, [routeData]);
+function MovingShipment({
+  routeData,
+  nodes,
+  shipmentProgress = 0
+}){
+  
 
   if (!routeData?.dijkstra?.path) return null;
 
@@ -112,7 +106,10 @@ function MovingShipment({ routeData, nodes }) {
 
   // interpolate position between points
   const totalSegments = coords.length - 1;
-  const progress = position % totalSegments;
+  const progress = Math.min(
+  totalSegments - 0.001,
+  (shipmentProgress / 100) * totalSegments
+);
 
   const index = Math.floor(progress);
   const t = progress - index;
@@ -124,6 +121,8 @@ function MovingShipment({ routeData, nodes }) {
 
   const lat = start[0] + (end[0] - start[0]) * t;
   const lng = start[1] + (end[1] - start[1]) * t;
+
+
 
   return (
     <CircleMarker
@@ -147,7 +146,8 @@ export default function MapView({
   routeData,
   onNodeClick,
   selectedRoute,
-  weatherOn
+  weatherOn,
+  recommendedRoute = []
 }) {
 
   console.log("🧠 simulationData:", simulationData);
@@ -163,6 +163,8 @@ export default function MapView({
     return "#22C55E";
   };
 
+
+
   return (
     <MapContainer
       center={[20, 80]}
@@ -174,7 +176,13 @@ export default function MapView({
 
     {/* 🔥 FLOW ANIMATION (ADD HERE) */}
     <FlowAnimation routes={routes} nodes={nodes} />
-    <MovingShipment routeData={routeData} nodes={nodes} />
+    <MovingShipment
+  routeData={routeData}
+  nodes={nodes}
+  shipmentProgress={
+    routeData?.shipmentProgress || 0
+  }
+/>
       <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
 
       {/* ================= ROUTES ================= */}
@@ -242,6 +250,34 @@ export default function MapView({
     </Tooltip>
   </Polyline>
 )}
+
+
+{recommendedRoute.length > 1 && (
+  <Polyline
+    positions={recommendedRoute
+      .map(id => {
+        const node = nodes.find(
+          n => n.id === id
+        );
+
+        return node
+          ? [node.lat, node.lng]
+          : null;
+      })
+      .filter(Boolean)}
+    pathOptions={{
+      color: "#22FF88",
+      weight: 7,
+      dashArray: "12"
+    }}
+  >
+    <Tooltip>
+      AI Re-Routed Path
+    </Tooltip>
+  </Polyline>
+)}
+
+
 
       {/* ================= GEMINI ROUTES ================= */}
       {aiRoutes.map((route, idx) => {
