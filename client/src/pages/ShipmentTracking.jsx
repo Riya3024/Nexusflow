@@ -164,16 +164,30 @@ const nextNode =
   }
 
 
-  const rerouteShipment =
-async () => {
+  const rerouteShipment = async () => {
+  try {
 
-  const res =
-    await axios.post(`${import.meta.env.VITE_API_URL}/api/shipments/${shipment.id}/reroute`);
+    const res = await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/shipments/${shipment.id}/reroute`
+    );
 
-  setShipment(
-    res.data
-  );
+    console.log(res.data);
+
+    setShipment({
+      ...res.data,
+      rerouted:true
+    });
+
+  } catch(err) {
+
+    console.log(
+      "Reroute error",
+      err.response?.data || err.message
+    );
+
+  }
 };
+
 
   return (
     <div style={styles.page}>
@@ -495,8 +509,41 @@ Generate AI Re-route Manually
 
 </button>
 
+{shipment?.rerouted && shipment?.recommendedRoute?.length > 0 && (
+
+<div
+style={{
+marginTop:"20px",
+padding:"15px",
+background:"#111827",
+borderRadius:"10px"
+}}
+>
+
+<h3>
+✅ Re-route Applied
+</h3>
+
+
+<p>
+<strong>New Route:</strong>
+</p>
+
+
+<p>
+{shipment.recommendedRoute.join(" ➜ ")}
+</p>
+
 
 </div>
+
+)}
+
+
+</div>
+
+
+
   {/* Alerts */}
   <div
   style={{
