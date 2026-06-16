@@ -1,8 +1,4 @@
-const {
-  getShipments,
-  updateShipment
-} = require("./shipmentStorage");
-
+const { getShipments, updateShipment } = require("./shipmentStorage");
 const { getBackupRoute } = require("./rerouteService");
 
 async function startShipmentAutoUpdate() {
@@ -31,13 +27,6 @@ async function startShipmentAutoUpdate() {
             : progress >= 25
             ? "In Transit"
             : "Booked";
-
-        const delayProbability = Math.min(
-          95,
-          Math.round((s.risk || 0) * 0.8 + progress * 0.2)
-        );
-
-        const healthScore = Math.max(0, 100 - (s.risk || 0) - progress / 2);
 
         const predictedEta = `${18 + Math.round((s.risk || 0) / 10) + Math.round(progress / 20)}h`;
 
@@ -89,10 +78,7 @@ async function startShipmentAutoUpdate() {
           currentStep: nextStep,
           progress,
           status,
-          delayProbability,
-          healthScore,
           predictedEta,
-          rerouteSuggestion,
           alerts,
           events: [...(s.events || []), event]
         });
