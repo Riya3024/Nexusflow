@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import MapView from "../components/map/MapView";
 
-const API_URL = "http://localhost:3001/api/shipments";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/shipments`;
 
 export default function ShipmentTracking() {
   const { id } = useParams();
@@ -168,9 +168,7 @@ const nextNode =
 async () => {
 
   const res =
-    await axios.post(
-      `http://localhost:3001/api/shipments/${shipment.id}/reroute`
-    );
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/shipments/${shipment.id}/reroute`);
 
   setShipment(
     res.data
